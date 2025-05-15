@@ -1,3 +1,4 @@
+#This file simply tells git to ignore any files that end in .chk and any /WORK directories. It will make these ignores recursively.
 *.chk
 WORK/
 
