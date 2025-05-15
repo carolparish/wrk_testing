@@ -1,14 +1,8 @@
-.gitignore
-CHANGELOG.txt
-*.o
-*.a
-*converted-to.*
-*.bak
-*.tar
-*.gz
-*.aux
-*.bcf
-*.lof
-*.log
-*.out
-*.pdf
+# By default, ignore everything except directories. If we do not
+# spec that directories are to be add-able, then git cannot 
+# recurse through the directory tree.
+*
+!*/
+
+# As an example, we *do* want to include shell scripts.
+!*.sh
