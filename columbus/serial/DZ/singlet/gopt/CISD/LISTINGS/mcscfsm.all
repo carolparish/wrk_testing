@@ -1,0 +1,125 @@
+
+&& iteration number 1 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+  total ao core energy =  145.886702016
+ MCSCF calculation performed for  1 DRT.
+
+ DRT  first state   no.of aver. states   weights
+  1   ground state          1             1.000
+
+ DRT file header:
+  title                                                                          
+ Molecular symmetry group:    a1 
+ Total number of electrons:    34
+ Spin multiplicity:            1
+ Number of active orbitals:    7
+ Number of active electrons:   8
+ Total number of CSFs:       139
+
+ Number of active-double rotations:        13
+ Number of active-active rotations:         0
+ Number of double-virtual rotations:      281
+ Number of active-virtual rotations:       86
+ 
+ iter     emc (average)    demc       wnorm      knorm      apxde  qcoupl
+    1   -227.2750482835  2.273E+02  5.891E-01  4.931E-01  5.789E-02  F   *not conv.*     
+    2   -227.3689433019  9.390E-02  1.850E-01  2.896E-01  1.780E-02  F   *not conv.*     
+    3   -227.3892617899  2.032E-02  3.277E-02  6.945E-02  6.654E-04  F   *not conv.*     
+    4   -227.3899696525  7.079E-04  5.349E-03  5.600E-03  6.714E-06  F   *not conv.*     
+    5   -227.3899778104  8.158E-06  1.642E-03  9.967E-04  3.715E-07  F   *not conv.*     
+    6   -227.3899782819  4.715E-07  4.875E-04  2.462E-04  2.744E-08  F   *not conv.*     
+    7   -227.3899783169  3.500E-08  1.420E-04  9.014E-05  2.934E-09  T   *not conv.*     
+
+ final mcscf convergence values:
+    8   -227.3899783199  2.924E-09  8.721E-07  7.904E-07  1.426E-13  T   *converged*     
+
+
+
+
+   ---------Individual total energies for all states:----------
+   DRT #1 state # 1 wt 1.000 total energy=     -227.389978320, rel. (eV)=   0.000000
+   ------------------------------------------------------------
+
+
+
+&& iteration number 2 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+  total ao core energy =  145.000892976
+ MCSCF calculation performed for  1 DRT.
+
+ DRT  first state   no.of aver. states   weights
+  1   ground state          1             1.000
+
+ DRT file header:
+  title                                                                          
+ Molecular symmetry group:    a1 
+ Total number of electrons:    34
+ Spin multiplicity:            1
+ Number of active orbitals:    7
+ Number of active electrons:   8
+ Total number of CSFs:       139
+
+ Number of active-double rotations:        13
+ Number of active-active rotations:         0
+ Number of double-virtual rotations:      281
+ Number of active-virtual rotations:       86
+ 
+ iter     emc (average)    demc       wnorm      knorm      apxde  qcoupl
+    1   -227.3892782183  2.274E+02  5.138E-02  9.323E-03  2.006E-04  F   *not conv.*     
+    2   -227.3894809097  2.027E-04  2.295E-03  7.098E-04  4.790E-07  F   *not conv.*     
+    3   -227.3894815267  6.171E-07  6.763E-04  2.166E-04  4.090E-08  F   *not conv.*     
+    4   -227.3894815799  5.319E-08  2.035E-04  6.802E-05  3.684E-09  F   *not conv.*     
+    5   -227.3894815847  4.813E-09  6.179E-05  3.045E-05  4.829E-10  T   *not conv.*     
+
+ final mcscf convergence values:
+    6   -227.3894815852  4.907E-10  6.394E-07  6.213E-08  1.960E-14  T   *converged*     
+
+
+
+
+   ---------Individual total energies for all states:----------
+   DRT #1 state # 1 wt 1.000 total energy=     -227.389481585, rel. (eV)=   0.000000
+   ------------------------------------------------------------
+
+
+
+&& iteration number 3 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+  total ao core energy =  145.000892976
+ MCSCF calculation performed for  1 DRT.
+
+ DRT  first state   no.of aver. states   weights
+  1   ground state          1             1.000
+
+ DRT file header:
+  title                                                                          
+ Molecular symmetry group:    a1 
+ Total number of electrons:    34
+ Spin multiplicity:            1
+ Number of active orbitals:    7
+ Number of active electrons:   8
+ Total number of CSFs:       139
+
+ Number of active-double rotations:        13
+ Number of active-active rotations:         0
+ Number of double-virtual rotations:      281
+ Number of active-virtual rotations:       86
+ 
+ iter     emc (average)    demc       wnorm      knorm      apxde  qcoupl
+    1   -227.3892782183  2.274E+02  5.138E-02  9.323E-03  2.006E-04  F   *not conv.*     
+    2   -227.3894809097  2.027E-04  2.295E-03  7.098E-04  4.790E-07  F   *not conv.*     
+    3   -227.3894815267  6.171E-07  6.763E-04  2.166E-04  4.090E-08  F   *not conv.*     
+    4   -227.3894815799  5.319E-08  2.035E-04  6.802E-05  3.684E-09  F   *not conv.*     
+    5   -227.3894815847  4.813E-09  6.179E-05  3.045E-05  4.829E-10  T   *not conv.*     
+
+ final mcscf convergence values:
+    6   -227.3894815852  4.907E-10  6.394E-07  6.213E-08  1.960E-14  T   *converged*     
+
+
+
+
+   ---------Individual total energies for all states:----------
+   DRT #1 state # 1 wt 1.000 total energy=     -227.389481585, rel. (eV)=   0.000000
+   ------------------------------------------------------------
+
+

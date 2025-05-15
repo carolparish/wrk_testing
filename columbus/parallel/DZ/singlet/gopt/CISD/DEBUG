@@ -1,0 +1,55 @@
+ nsym=  4
+cione,cidrtin,cigradient=1,ndrt=
+getvector : 3 0 2 0
+getvector2 : 4, 3 0 2 0,   4,  4 
+getvector : 0 0 0 0
+getvector2 : 4, 0 0 0 0,   4,  4 
+getvector : 6 3 4 2
+getvector2 : 4, 6 3 4 2,   4,  4 
+getvector : 5 0 3 0
+getvector2 : 4, 5 0 3 0,   4,  4 
+getvector : 0 0 0 0
+getvector2 : 4, 0 0 0 0,   4,  4 
+getvector : 1
+getvector2 : 1, 1,   4,1 
+groups of 2 elements,  / frozen core orbitals ,  -1 
+groups of 2 elements,  / frozen virtual orbitals ,  -1 
+groups of 2 elements,  ,  9 
+groups of 2 elements,  ,  15 
+groups of 2 elements,  ,  13 
+groups of 2 elements,  /internal orbitals ,  -1 
+groups of 1 elements, /occminr,  6 
+groups of 1 elements, /occmaxr,  6 
+groups of 1 elements, /bminr,  6 
+groups of 1 elements, /bmaxr,  6 
+groups of 1 elements, /step masks r,  6 
+groups of 1 elements, /occmin,  19 
+groups of 1 elements, /occmax,  19 
+groups of 1 elements, /bmin,  19 
+groups of 1 elements, /bmax,  19 
+groups of 1 elements, /step masks,  19 
+groups of 1 elements, /step vector disp pairs,  18 
+nintern=20,nreforb=13
+groups of 1 elements, /reference occupations vector ,  19 
+groups of 2 elements,  / frozen core orbitals ,  9 
+groups of 2 elements,  / frozen virtual orbitals ,  -1 
+groups of 2 elements,  ,  15 
+groups of 2 elements,  ,  13 
+groups of 2 elements,  /internal orbitals ,  -1 
+groups of 1 elements, /occminr,  6 
+groups of 1 elements, /occmaxr,  6 
+groups of 1 elements, /bminr,  6 
+groups of 1 elements, /bmaxr,  6 
+groups of 1 elements, /step masks r,  6 
+groups of 1 elements, /occmin,  14 
+groups of 1 elements, /occmax,  14 
+groups of 1 elements, /bmin,  14 
+groups of 1 elements, /bmax,  14 
+groups of 1 elements, /step masks,  14 
+groups of 1 elements, /step vector disp pairs,  13 
+nintern=15,nreforb=8
+groups of 1 elements, /reference occupations vector ,  14 
+prodciudgin: input_data(*)=Y:N:N:0:1:0:Y:::1:1:6:1e-4:30:1:6:1e-4:y
+prodciudgin: ncnode=
+prodciudgin: ncnode (end)=
+cionem: ncnode =maxmem,ncpu,nvmax,bandwidth=y6

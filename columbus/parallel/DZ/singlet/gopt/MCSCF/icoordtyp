@@ -1,0 +1,15 @@
+   1.     C 2  -  O 1   STRE  sc=.8500
+   2.     C 3  -  O 1   STRE  sc=.8500
+   3.     C 4  =  C 2   STRE  sc=.8600
+   4.     C 5  =  C 3   STRE  sc=.8600
+   5.     C 5  =  C 4   STRE  sc=.8600
+   6.     H 6  -  C 2   STRE  sc=.9000
+   7.     H 7  -  C 3   STRE  sc=.9000
+   8.  5-membered ring  BEND  sc=.7850
+   9.  5-membered ring  BEND  sc=.7850
+  10.  5-membered ring  TORS  sc=*****
+  11.  5-membered ring  TORS  sc=*****
+  12. ring sXY C 2- H 6 ROCK  sc=.8000
+  13. ring sXY C 2- H 6 OUT   sc=.7000
+  14. ring sXY C 3- H 7 ROCK  sc=.8000
+  15. ring sXY C 3- H 7 OUT   sc=.7000

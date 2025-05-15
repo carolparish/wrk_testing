@@ -1,0 +1,1 @@
+$AMBERHOME/bin/pmemd.cuda -O -i heat.mdin -p Bound_iGluN2A_APO_solv.complex.prmtop -c Bound_iGluN2A_APO_min7.rst7 -ref Bound_iGluN2A_APO_min7.rst7 -o Bound_iGluN2A_APO_heat.mdout -r Bound_iGluN2A_APO_heat.rst7 -x Bound_iGluN2A_APO_heat.nc

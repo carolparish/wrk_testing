@@ -1,0 +1,5 @@
+trajin *md*.nc
+autoimage
+strip :WAT:Cl-:Na+
+rmsd protein :1-279@CA
+trajout Bound_iGluN2A_APO_s1_image.nc netcdf

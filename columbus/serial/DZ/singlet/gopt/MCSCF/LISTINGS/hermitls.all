@@ -1,0 +1,865 @@
+
+&& iteration number 1 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+ 
+ Work memory size (LMWORK) :   393216000 =3000   megabytes.
+
+ Default basis set library used :
+        /sphome/kedziora/dalton/basis/                              
+
+
+    $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+    $$$$$$$$$$$  DALTON - An electronic structure program  $$$$$$$$$$$
+    $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+               This is output from DALTON (beta-version 0.9) 
+
+                          Principal authors:
+
+            Trygve Helgaker,     University of Oslo,        Norway 
+            Hans Joergen Jensen, University of Odense,      Denmark
+            Poul Joergensen,     University of Aarhus,      Denmark
+            Henrik Koch,         University of Aarhus,      Denmark
+            Jeppe Olsen,         University of Lund,        Sweden 
+            Hans Aagren,         University of Linkoeping,  Sweden 
+
+                          Contributors:
+
+            Torgeir Andersen,    University of Oslo,        Norway 
+            Keld L. Bak,         University of Copenhagen,  Denmark
+            Vebjoern Bakken,     University of Oslo,        Norway 
+            Ove Christiansen,    University of Aarhus,      Denmark
+            Paal Dahle,          University of Oslo,        Norway 
+            Erik K. Dalskov,     University of Odense,      Denmark
+            Thomas Enevoldsen,   University of Odense,      Denmark
+            Asger Halkier,       University of Aarhus,      Denmark
+            Hanne Heiberg,       University of Oslo,        Norway 
+            Dan Jonsson,         University of Linkoeping,  Sweden 
+            Sheela Kirpekar,     University of Odense,      Denmark
+            Rika Kobayashi,      University of Aarhus,      Denmark
+            Alfredo S. de Meras, Valencia University,       Spain  
+            Kurt Mikkelsen,      University of Aarhus,      Denmark
+            Patrick Norman,      University of Linkoeping,  Sweden 
+            Martin J. Packer,    University of Sheffield,   UK     
+            Kenneth Ruud,        University of Oslo,        Norway 
+            Trond Saue,          University of Oslo,        Norway 
+            Peter Taylor,        San Diego Superc. Center,  USA    
+            Olav Vahtras,        University of Linkoeping,  Sweden
+
+                                             Release Date:  August 1996
+------------------------------------------------------------------------
+
+
+      
+     NOTE:
+      
+     This is an experimental code for the evaluation of molecular
+     properties using (MC)SCF/CC wave functions. The authors accept
+      no responsibility for the performance of the code or for the
+     correctness of the results.
+      
+     The code (in whole or part) is not to be reproduced for further
+     distribution without the written permission of T. Helgaker,
+     H. J. Aa. Jensen or P. Taylor.
+      
+     If results obtained with this code are published, an
+     appropriate citation would be:
+      
+     T. Helgaker, H. J. Aa. Jensen, P.Joergensen, H. Koch,
+     J. Olsen, H. Aagren, T. Andersen, K. L. Bak, V. Bakken,
+     O. Christiansen, P. Dahle, E. K. Dalskov, T. Enevoldsen,
+     A. Halkier, H. Heiberg, D. Jonsson, S. Kirpekar, R. Kobayashi,
+     A. S. de Meras, K. V. Mikkelsen, P. Norman, M. J. Packer,
+     K. Ruud, T.Saue, P. R. Taylor, and O. Vahtras:
+     DALTON, an electronic structure program"
+
+
+
+     ******************************************
+     **    PROGRAM:              DALTON      **
+     **    PROGRAM VERSION:      5.4.0.0     **
+     **    DISTRIBUTION VERSION: 5.9.a       **
+     ******************************************
+
+
+
+ <<<<<<<<<< OUTPUT FROM GENERAL INPUT PROCESSING >>>>>>>>>>
+
+
+
+
+ Default print level:        0
+
+    Integral sections will be executed
+    Starting in Integral Section -
+
+
+
+ *************************************************************************
+ ****************** Output from HERMIT input processing ******************
+ *************************************************************************
+
+
+
+ Default print level:        2
+
+
+ Calculation of one- and two-electron Hamiltonian integrals.
+
+
+ The following one-electron property integrals are calculated:
+
+          - overlap integrals
+          - Cartesian multipole moment integrals of orders 4 and lower
+          - electronic angular momentum around the origin
+
+
+ Changes of defaults for READIN:
+ -------------------------------
+
+
+ Maximum number of primitives per integral block :    9
+
+
+
+ *************************************************************************
+ ****************** Output from READIN input processing ******************
+ *************************************************************************
+
+
+
+  Title Cards
+  -----------
+
+                                                                          
+                                                                          
+
+
+  Symmetry Operations
+  -------------------
+
+  Symmetry operations: 2
+
+
+
+                      SYMGRP:Point group information
+                      ------------------------------
+
+Point group: C2v
+
+   * The point group was generated by:
+
+      Reflection in the yz-plane
+      Reflection in the xz-plane
+
+   * Group multiplication table
+
+        |  E   C2z  Oxz  Oyz
+   -----+--------------------
+     E  |  E 
+    C2z | C2z   E 
+    Oxz | Oxz  Oyz   E 
+    Oyz | Oyz  Oxz  C2z   E 
+
+   * Character table
+
+        |  E   C2z  Oxz  Oyz
+   -----+--------------------
+    A1  |   1    1    1    1
+    B1  |   1   -1    1   -1
+    B2  |   1   -1   -1    1
+    A2  |   1    1   -1   -1
+
+   * Direct product table
+
+        | A1   B1   B2   A2 
+   -----+--------------------
+    A1  | A1 
+    B1  | B1   A1 
+    B2  | B2   A2   A1 
+    A2  | A2   B2   B1   A1 
+
+
+  Atoms and basis sets
+  --------------------
+
+  Number of atom types:     3
+  Total number of atoms:    7
+
+  label    atoms   charge   prim    cont     basis   
+  ----------------------------------------------------------------------
+  O  1        1       8      26      14      [9s4p1d|3s2p1d]                              
+  C  1        2       6      26      14      [9s4p1d|3s2p1d]                              
+  C  2        2       6      26      14      [9s4p1d|3s2p1d]                              
+  H  1        2       1       7       5      [4s1p|2s1p]                                  
+  ----------------------------------------------------------------------
+  ----------------------------------------------------------------------
+  total:      7      34     144      80
+
+  Spherical harmonic basis used.
+  Threshold for integrals:  1.00D-15
+
+
+  Cartesian Coordinates
+  ---------------------
+
+  Total number of coordinates: 21
+
+
+   1   O  1     x      0.0000000000
+   2            y      0.0000000000
+   3            z     -2.1795687800
+
+   4   C  1 1   x      0.0000000000
+   5            y     -2.0691509000
+   6            z     -0.6673545900
+
+   7   C  1 2   x      0.0000000000
+   8            y      2.0691509000
+   9            z     -0.6673545900
+
+  10   C  2 1   x      0.0000000000
+  11            y     -1.2585939800
+  12            z      1.7759837900
+
+  13   C  2 2   x      0.0000000000
+  14            y      1.2585939800
+  15            z      1.7759837900
+
+  16   H  1 1   x      0.0000000000
+  17            y     -3.8777146600
+  18            z     -1.5843680100
+
+  19   H  1 2   x      0.0000000000
+  20            y      3.8777146600
+  21            z     -1.5843680100
+
+
+
+  Symmetry Coordinates
+  --------------------
+
+  Number of coordinates in each symmetry:   7  4  7  3
+
+
+  Symmetry 1
+
+   1   O  1  z    3
+   2   C  1  y    [ 5  -  8 ]/2
+   3   C  1  z    [ 6  +  9 ]/2
+   4   C  2  y    [11  - 14 ]/2
+   5   C  2  z    [12  + 15 ]/2
+   6   H  1  y    [17  - 20 ]/2
+   7   H  1  z    [18  + 21 ]/2
+
+
+  Symmetry 2
+
+   8   O  1  x    1
+   9   C  1  x    [ 4  +  7 ]/2
+  10   C  2  x    [10  + 13 ]/2
+  11   H  1  x    [16  + 19 ]/2
+
+
+  Symmetry 3
+
+  12   O  1  y    2
+  13   C  1  y    [ 5  +  8 ]/2
+  14   C  1  z    [ 6  -  9 ]/2
+  15   C  2  y    [11  + 14 ]/2
+  16   C  2  z    [12  - 15 ]/2
+  17   H  1  y    [17  + 20 ]/2
+  18   H  1  z    [18  - 21 ]/2
+
+
+  Symmetry 4
+
+  19   C  1  x    [ 4  -  7 ]/2
+  20   C  2  x    [10  - 13 ]/2
+  21   H  1  x    [16  - 19 ]/2
+
+
+   Interatomic separations (in Angstroms):
+   ---------------------------------------
+
+            O  1        C  1        C  2        C  1        C  2        H  1
+
+   O  1    0.000000
+   C  1    1.356199    0.000000
+   C  2    1.356199    2.189894    0.000000
+   C  1    2.196592    1.362249    2.184661    0.000000
+   C  2    2.196592    2.184661    1.362249    1.332038    0.000000
+   H  1    2.076029    1.073045    3.184139    2.254552    3.248028    0.000000
+   H  2    2.076029    3.184139    1.073045    3.248028    2.254552    4.103995
+
+            H  2
+
+   H  2    0.000000
+
+
+
+
+  Bond distances (angstroms):
+  ---------------------------
+
+                  atom 1     atom 2                           distance
+                  ------     ------                           --------
+  bond distance:    C  1       O  1                           1.356199
+  bond distance:    C  2       O  1                           1.356199
+  bond distance:    C  1       C  1                           1.362249
+  bond distance:    C  2       C  2                           1.362249
+  bond distance:    C  2       C  1                           1.332038
+  bond distance:    H  1       C  1                           1.073045
+  bond distance:    H  2       C  2                           1.073045
+
+
+  Bond angles (degrees):
+  ----------------------
+
+                  atom 1     atom 2     atom 3                   angle
+                  ------     ------     ------                   -----
+  bond angle:       C  2       O  1       C  1                 107.678
+  bond angle:       C  1       C  1       O  1                 107.808
+  bond angle:       H  1       C  1       O  1                 116.952
+  bond angle:       H  1       C  1       C  1                 135.240
+  bond angle:       C  2       C  2       O  1                 107.808
+  bond angle:       H  2       C  2       O  1                 116.952
+  bond angle:       H  2       C  2       C  2                 135.240
+  bond angle:       C  2       C  1       C  1                 108.353
+  bond angle:       C  1       C  2       C  2                 108.353
+
+
+  Nuclear repulsion energy :  145.886702016474
+
+
+  Orbital exponents and contraction coefficients
+  ----------------------------------------------
+
+
+  O  1   1s    1    11720.000000    0.0007 -0.0002  0.0000
+   gen. cont.  2     1759.000000    0.0055 -0.0013  0.0000
+               3      400.800000    0.0278 -0.0063  0.0000
+               4      113.700000    0.1048 -0.0257  0.0000
+               5       37.030000    0.2831 -0.0709  0.0000
+               6       13.270000    0.4487 -0.1654  0.0000
+               7        5.025000    0.2710 -0.1170  0.0000
+               8        1.013000    0.0155  0.5574  0.0000
+               9        0.302300   -0.0026  0.5728  1.0000
+
+  O  1   2px  10       17.700000    0.0430  0.0000
+   gen. cont. 11        3.854000    0.2289  0.0000
+              12        1.046000    0.5087  0.0000
+              13        0.275300    0.4605  1.0000
+
+  O  1   2py  14       17.700000    0.0430  0.0000
+   gen. cont. 15        3.854000    0.2289  0.0000
+              16        1.046000    0.5087  0.0000
+              17        0.275300    0.4605  1.0000
+
+  O  1   2pz  18       17.700000    0.0430  0.0000
+   gen. cont. 19        3.854000    0.2289  0.0000
+              20        1.046000    0.5087  0.0000
+              21        0.275300    0.4605  1.0000
+
+  O  1   3d2- 22        1.185000    1.0000
+
+  O  1   3d1- 23        1.185000    1.0000
+
+  O  1   3d0  24        1.185000    1.0000
+
+  O  1   3d1+ 25        1.185000    1.0000
+
+  O  1   3d2+ 26        1.185000    1.0000
+
+  C  1#1 1s   27     6665.000000    0.0007 -0.0001  0.0000
+   gen. cont. 28     1000.000000    0.0053 -0.0012  0.0000
+              29      228.000000    0.0271 -0.0057  0.0000
+              30       64.710000    0.1017 -0.0233  0.0000
+              31       21.060000    0.2747 -0.0640  0.0000
+              32        7.495000    0.4486 -0.1500  0.0000
+              33        2.797000    0.2851 -0.1273  0.0000
+              34        0.521500    0.0152  0.5445  0.0000
+              35        0.159600   -0.0032  0.5805  1.0000
+
+  C  1#2 1s   36     6665.000000    0.0007 -0.0001  0.0000
+   gen. cont. 37     1000.000000    0.0053 -0.0012  0.0000
+              38      228.000000    0.0271 -0.0057  0.0000
+              39       64.710000    0.1017 -0.0233  0.0000
+              40       21.060000    0.2747 -0.0640  0.0000
+              41        7.495000    0.4486 -0.1500  0.0000
+              42        2.797000    0.2851 -0.1273  0.0000
+              43        0.521500    0.0152  0.5445  0.0000
+              44        0.159600   -0.0032  0.5805  1.0000
+
+  C  1#1 2px  45        9.439000    0.0381  0.0000
+   gen. cont. 46        2.002000    0.2095  0.0000
+              47        0.545600    0.5086  0.0000
+              48        0.151700    0.4688  1.0000
+
+  C  1#2 2px  49        9.439000    0.0381  0.0000
+   gen. cont. 50        2.002000    0.2095  0.0000
+              51        0.545600    0.5086  0.0000
+              52        0.151700    0.4688  1.0000
+
+  C  1#1 2py  53        9.439000    0.0381  0.0000
+   gen. cont. 54        2.002000    0.2095  0.0000
+              55        0.545600    0.5086  0.0000
+              56        0.151700    0.4688  1.0000
+
+  C  1#2 2py  57        9.439000    0.0381  0.0000
+   gen. cont. 58        2.002000    0.2095  0.0000
+              59        0.545600    0.5086  0.0000
+              60        0.151700    0.4688  1.0000
+
+  C  1#1 2pz  61        9.439000    0.0381  0.0000
+   gen. cont. 62        2.002000    0.2095  0.0000
+              63        0.545600    0.5086  0.0000
+              64        0.151700    0.4688  1.0000
+
+  C  1#2 2pz  65        9.439000    0.0381  0.0000
+   gen. cont. 66        2.002000    0.2095  0.0000
+              67        0.545600    0.5086  0.0000
+              68        0.151700    0.4688  1.0000
+
+  C  1#1 3d2- 69        0.550000    1.0000
+
+  C  1#2 3d2- 70        0.550000    1.0000
+
+  C  1#1 3d1- 71        0.550000    1.0000
+
+  C  1#2 3d1- 72        0.550000    1.0000
+
+  C  1#1 3d0  73        0.550000    1.0000
+
+  C  1#2 3d0  74        0.550000    1.0000
+
+  C  1#1 3d1+ 75        0.550000    1.0000
+
+  C  1#2 3d1+ 76        0.550000    1.0000
+
+  C  1#1 3d2+ 77        0.550000    1.0000
+
+  C  1#2 3d2+ 78        0.550000    1.0000
+
+  C  2#1 1s   79     6665.000000    0.0007 -0.0001  0.0000
+   gen. cont. 80     1000.000000    0.0053 -0.0012  0.0000
+              81      228.000000    0.0271 -0.0057  0.0000
+              82       64.710000    0.1017 -0.0233  0.0000
+              83       21.060000    0.2747 -0.0640  0.0000
+              84        7.495000    0.4486 -0.1500  0.0000
+              85        2.797000    0.2851 -0.1273  0.0000
+              86        0.521500    0.0152  0.5445  0.0000
+              87        0.159600   -0.0032  0.5805  1.0000
+
+  C  2#2 1s   88     6665.000000    0.0007 -0.0001  0.0000
+   gen. cont. 89     1000.000000    0.0053 -0.0012  0.0000
+              90      228.000000    0.0271 -0.0057  0.0000
+              91       64.710000    0.1017 -0.0233  0.0000
+              92       21.060000    0.2747 -0.0640  0.0000
+              93        7.495000    0.4486 -0.1500  0.0000
+              94        2.797000    0.2851 -0.1273  0.0000
+              95        0.521500    0.0152  0.5445  0.0000
+              96        0.159600   -0.0032  0.5805  1.0000
+
+  C  2#1 2px  97        9.439000    0.0381  0.0000
+   gen. cont. 98        2.002000    0.2095  0.0000
+              99        0.545600    0.5086  0.0000
+             100        0.151700    0.4688  1.0000
+
+  C  2#2 2px 101        9.439000    0.0381  0.0000
+   gen. cont.102        2.002000    0.2095  0.0000
+             103        0.545600    0.5086  0.0000
+             104        0.151700    0.4688  1.0000
+
+  C  2#1 2py 105        9.439000    0.0381  0.0000
+   gen. cont.106        2.002000    0.2095  0.0000
+             107        0.545600    0.5086  0.0000
+             108        0.151700    0.4688  1.0000
+
+  C  2#2 2py 109        9.439000    0.0381  0.0000
+   gen. cont.110        2.002000    0.2095  0.0000
+             111        0.545600    0.5086  0.0000
+             112        0.151700    0.4688  1.0000
+
+  C  2#1 2pz 113        9.439000    0.0381  0.0000
+   gen. cont.114        2.002000    0.2095  0.0000
+             115        0.545600    0.5086  0.0000
+             116        0.151700    0.4688  1.0000
+
+  C  2#2 2pz 117        9.439000    0.0381  0.0000
+   gen. cont.118        2.002000    0.2095  0.0000
+             119        0.545600    0.5086  0.0000
+             120        0.151700    0.4688  1.0000
+
+  C  2#1 3d2-121        0.550000    1.0000
+
+  C  2#2 3d2-122        0.550000    1.0000
+
+  C  2#1 3d1-123        0.550000    1.0000
+
+  C  2#2 3d1-124        0.550000    1.0000
+
+  C  2#1 3d0 125        0.550000    1.0000
+
+  C  2#2 3d0 126        0.550000    1.0000
+
+  C  2#1 3d1+127        0.550000    1.0000
+
+  C  2#2 3d1+128        0.550000    1.0000
+
+  C  2#1 3d2+129        0.550000    1.0000
+
+  C  2#2 3d2+130        0.550000    1.0000
+
+  H  1#1 1s  131       13.010000    0.0197  0.0000
+   gen. cont.132        1.962000    0.1380  0.0000
+             133        0.444600    0.4781  0.0000
+             134        0.122000    0.5012  1.0000
+
+  H  1#2 1s  135       13.010000    0.0197  0.0000
+   gen. cont.136        1.962000    0.1380  0.0000
+             137        0.444600    0.4781  0.0000
+             138        0.122000    0.5012  1.0000
+
+  H  1#1 2px 139        0.727000    1.0000
+
+  H  1#2 2px 140        0.727000    1.0000
+
+  H  1#1 2py 141        0.727000    1.0000
+
+  H  1#2 2py 142        0.727000    1.0000
+
+  H  1#1 2pz 143        0.727000    1.0000
+
+  H  1#2 2pz 144        0.727000    1.0000
+
+
+  Contracted Orbitals
+  -------------------
+
+   1  O  1    1s       1     2     3     4     5     6     7     8     9
+   2  O  1    1s       1     2     3     4     5     6     7     8     9
+   3  O  1    1s       9
+   4  O  1    2px     10    11    12    13
+   5  O  1    2py     14    15    16    17
+   6  O  1    2pz     18    19    20    21
+   7  O  1    2px     13
+   8  O  1    2py     17
+   9  O  1    2pz     21
+  10  O  1    3d2-    22
+  11  O  1    3d1-    23
+  12  O  1    3d0     24
+  13  O  1    3d1+    25
+  14  O  1    3d2+    26
+  15  C  1#1  1s    27  28  29  30  31  32  33  34  35
+  16  C  1#2  1s    36  37  38  39  40  41  42  43  44
+  17  C  1#1  1s    27  28  29  30  31  32  33  34  35
+  18  C  1#2  1s    36  37  38  39  40  41  42  43  44
+  19  C  1#1  1s    35
+  20  C  1#2  1s    44
+  21  C  1#1  2px   45  46  47  48
+  22  C  1#2  2px   49  50  51  52
+  23  C  1#1  2py   53  54  55  56
+  24  C  1#2  2py   57  58  59  60
+  25  C  1#1  2pz   61  62  63  64
+  26  C  1#2  2pz   65  66  67  68
+  27  C  1#1  2px   48
+  28  C  1#2  2px   52
+  29  C  1#1  2py   56
+  30  C  1#2  2py   60
+  31  C  1#1  2pz   64
+  32  C  1#2  2pz   68
+  33  C  1#1  3d2-  69
+  34  C  1#2  3d2-  70
+  35  C  1#1  3d1-  71
+  36  C  1#2  3d1-  72
+  37  C  1#1  3d0   73
+  38  C  1#2  3d0   74
+  39  C  1#1  3d1+  75
+  40  C  1#2  3d1+  76
+  41  C  1#1  3d2+  77
+  42  C  1#2  3d2+  78
+  43  C  2#1  1s    79  80  81  82  83  84  85  86  87
+  44  C  2#2  1s    88  89  90  91  92  93  94  95  96
+  45  C  2#1  1s    79  80  81  82  83  84  85  86  87
+  46  C  2#2  1s    88  89  90  91  92  93  94  95  96
+  47  C  2#1  1s    87
+  48  C  2#2  1s    96
+  49  C  2#1  2px   97  98  99 100
+  50  C  2#2  2px  101 102 103 104
+  51  C  2#1  2py  105 106 107 108
+  52  C  2#2  2py  109 110 111 112
+  53  C  2#1  2pz  113 114 115 116
+  54  C  2#2  2pz  117 118 119 120
+  55  C  2#1  2px  100
+  56  C  2#2  2px  104
+  57  C  2#1  2py  108
+  58  C  2#2  2py  112
+  59  C  2#1  2pz  116
+  60  C  2#2  2pz  120
+  61  C  2#1  3d2- 121
+  62  C  2#2  3d2- 122
+  63  C  2#1  3d1- 123
+  64  C  2#2  3d1- 124
+  65  C  2#1  3d0  125
+  66  C  2#2  3d0  126
+  67  C  2#1  3d1+ 127
+  68  C  2#2  3d1+ 128
+  69  C  2#1  3d2+ 129
+  70  C  2#2  3d2+ 130
+  71  H  1#1  1s   131 132 133 134
+  72  H  1#2  1s   135 136 137 138
+  73  H  1#1  1s   134
+  74  H  1#2  1s   138
+  75  H  1#1  2px  139
+  76  H  1#2  2px  140
+  77  H  1#1  2py  141
+  78  H  1#2  2py  142
+  79  H  1#1  2pz  143
+  80  H  1#2  2pz  144
+
+
+
+
+  Symmetry Orbitals
+  -----------------
+
+  Number of orbitals in each symmetry:        31 12 27 10
+
+
+  Symmetry  A1 ( 1)
+
+    1     O  1     1s         1
+    2     O  1     1s         2
+    3     O  1     1s         3
+    4     O  1     2pz        6
+    5     O  1     2pz        9
+    6     O  1     3d0       12
+    7     O  1     3d2+      14
+    8     C  1     1s        15  +  16
+    9     C  1     1s        17  +  18
+   10     C  1     1s        19  +  20
+   11     C  1     2py       23  -  24
+   12     C  1     2pz       25  +  26
+   13     C  1     2py       29  -  30
+   14     C  1     2pz       31  +  32
+   15     C  1     3d1-      35  -  36
+   16     C  1     3d0       37  +  38
+   17     C  1     3d2+      41  +  42
+   18     C  2     1s        43  +  44
+   19     C  2     1s        45  +  46
+   20     C  2     1s        47  +  48
+   21     C  2     2py       51  -  52
+   22     C  2     2pz       53  +  54
+   23     C  2     2py       57  -  58
+   24     C  2     2pz       59  +  60
+   25     C  2     3d1-      63  -  64
+   26     C  2     3d0       65  +  66
+   27     C  2     3d2+      69  +  70
+   28     H  1     1s        71  +  72
+   29     H  1     1s        73  +  74
+   30     H  1     2py       77  -  78
+   31     H  1     2pz       79  +  80
+
+
+  Symmetry  B1 ( 2)
+
+   32     O  1     2px        4
+   33     O  1     2px        7
+   34     O  1     3d1+      13
+   35     C  1     2px       21  +  22
+   36     C  1     2px       27  +  28
+   37     C  1     3d2-      33  -  34
+   38     C  1     3d1+      39  +  40
+   39     C  2     2px       49  +  50
+   40     C  2     2px       55  +  56
+   41     C  2     3d2-      61  -  62
+   42     C  2     3d1+      67  +  68
+   43     H  1     2px       75  +  76
+
+
+  Symmetry  B2 ( 3)
+
+   44     O  1     2py        5
+   45     O  1     2py        8
+   46     O  1     3d1-      11
+   47     C  1     1s        15  -  16
+   48     C  1     1s        17  -  18
+   49     C  1     1s        19  -  20
+   50     C  1     2py       23  +  24
+   51     C  1     2pz       25  -  26
+   52     C  1     2py       29  +  30
+   53     C  1     2pz       31  -  32
+   54     C  1     3d1-      35  +  36
+   55     C  1     3d0       37  -  38
+   56     C  1     3d2+      41  -  42
+   57     C  2     1s        43  -  44
+   58     C  2     1s        45  -  46
+   59     C  2     1s        47  -  48
+   60     C  2     2py       51  +  52
+   61     C  2     2pz       53  -  54
+   62     C  2     2py       57  +  58
+   63     C  2     2pz       59  -  60
+   64     C  2     3d1-      63  +  64
+   65     C  2     3d0       65  -  66
+   66     C  2     3d2+      69  -  70
+   67     H  1     1s        71  -  72
+   68     H  1     1s        73  -  74
+   69     H  1     2py       77  +  78
+   70     H  1     2pz       79  -  80
+
+
+  Symmetry  A2 ( 4)
+
+   71     O  1     3d2-      10
+   72     C  1     2px       21  -  22
+   73     C  1     2px       27  -  28
+   74     C  1     3d2-      33  +  34
+   75     C  1     3d1+      39  -  40
+   76     C  2     2px       49  -  50
+   77     C  2     2px       55  -  56
+   78     C  2     3d2-      61  +  62
+   79     C  2     3d1+      67  -  68
+   80     H  1     2px       75  -  76
+
+  Symmetries of electric field:  B1 (2)  B2 (3)  A1 (1)
+
+  Symmetries of magnetic field:  B2 (3)  B1 (2)  A2 (4)
+
+
+ Copy of input to READIN
+ -----------------------
+
+INTGRL                                                                          
+                                                                                
+                                                                                
+s   3    2X   Y      0.10D-14                                                   
+       8.0    1    3    1    1    1                                             
+O  1   0.000000000000000   0.000000000000000  -2.179568780000000       *        
+H   9   3                                                                       
+      11720.00000000         0.00071000        -0.00016000         0.00000000   
+       1759.00000000         0.00547000        -0.00126300         0.00000000   
+        400.80000000         0.02783700        -0.00626700         0.00000000   
+        113.70000000         0.10480000        -0.02571600         0.00000000   
+         37.03000000         0.28306200        -0.07092400         0.00000000   
+         13.27000000         0.44871900        -0.16541100         0.00000000   
+          5.02500000         0.27095200        -0.11695500         0.00000000   
+          1.01300000         0.01545800         0.55736800         0.00000000   
+          0.30230000        -0.00258500         0.57275900         1.00000000   
+H   4   2                                                                       
+         17.70000000         0.04301800         0.00000000                      
+          3.85400000         0.22891300         0.00000000                      
+          1.04600000         0.50872800         0.00000000                      
+          0.27530000         0.46053100         1.00000000                      
+H   1   1                                                                       
+          1.18500000         1.00000000                                         
+       6.0    2    3    1    1    1                                             
+C  1   0.000000000000000  -2.069150900000000  -0.667354590000000       *        
+C  2   0.000000000000000  -1.258593980000000   1.775983790000000       *        
+H   9   3                                                                       
+       6665.00000000         0.00069200        -0.00014600         0.00000000   
+       1000.00000000         0.00532900        -0.00115400         0.00000000   
+        228.00000000         0.02707700        -0.00572500         0.00000000   
+         64.71000000         0.10171800        -0.02331200         0.00000000   
+         21.06000000         0.27474000        -0.06395500         0.00000000   
+          7.49500000         0.44856400        -0.14998100         0.00000000   
+          2.79700000         0.28507400        -0.12726200         0.00000000   
+          0.52150000         0.01520400         0.54452900         0.00000000   
+          0.15960000        -0.00319100         0.58049600         1.00000000   
+H   4   2                                                                       
+          9.43900000         0.03810900         0.00000000                      
+          2.00200000         0.20948000         0.00000000                      
+          0.54560000         0.50855700         0.00000000                      
+          0.15170000         0.46884200         1.00000000                      
+H   1   1                                                                       
+          0.55000000         1.00000000                                         
+       1.0    1    2    1    1                                                  
+H  1   0.000000000000000  -3.877714660000000  -1.584368010000000       *        
+H   4   2                                                                       
+         13.01000000         0.01968500         0.00000000                      
+          1.96200000         0.13797700         0.00000000                      
+          0.44460000         0.47814800         0.00000000                      
+          0.12200000         0.50124000         1.00000000                      
+H   1   1                                                                       
+          0.72700000         1.00000000                                         
+
+
+
+
+ ************************************************************************
+ ************************** Output from HERONE **************************
+ ************************************************************************
+
+found     888 non-vanashing overlap integrals
+found    1007 non-vanashing nuclear attraction integrals
+found     896 non-vanashing kinetic energy integrals
+
+
+
+
+
+
+ found     566 non-vanashing integrals ( typea=  1 typeb=  0)
+ found     849 non-vanashing integrals ( typea=  1 typeb=  1)
+ found     999 non-vanashing integrals ( typea=  1 typeb=  2)
+
+
+ found     893 non-vanashing integrals ( typea=  1 typeb=  3)
+ found     561 non-vanashing integrals ( typea=  1 typeb=  4)
+ found     642 non-vanashing integrals ( typea=  1 typeb=  5)
+ found     913 non-vanashing integrals ( typea=  1 typeb=  6)
+ found     957 non-vanashing integrals ( typea=  1 typeb=  7)
+ found    1001 non-vanashing integrals ( typea=  1 typeb=  8)
+
+
+ found     569 non-vanashing integrals ( typea=  1 typeb=  9)
+ found     850 non-vanashing integrals ( typea=  1 typeb= 10)
+ found    1007 non-vanashing integrals ( typea=  1 typeb= 11)
+ found     573 non-vanashing integrals ( typea=  1 typeb= 12)
+ found     633 non-vanashing integrals ( typea=  1 typeb= 13)
+ found     642 non-vanashing integrals ( typea=  1 typeb= 14)
+ found     874 non-vanashing integrals ( typea=  1 typeb= 15)
+ found    1007 non-vanashing integrals ( typea=  1 typeb= 16)
+ found     957 non-vanashing integrals ( typea=  1 typeb= 17)
+ found    1001 non-vanashing integrals ( typea=  1 typeb= 18)
+
+
+ found     900 non-vanashing integrals ( typea=  1 typeb= 19)
+ found     570 non-vanashing integrals ( typea=  1 typeb= 20)
+ found     641 non-vanashing integrals ( typea=  1 typeb= 21)
+ found     902 non-vanashing integrals ( typea=  1 typeb= 22)
+ found     953 non-vanashing integrals ( typea=  1 typeb= 23)
+ found    1007 non-vanashing integrals ( typea=  1 typeb= 24)
+ found     581 non-vanashing integrals ( typea=  1 typeb= 25)
+ found     638 non-vanashing integrals ( typea=  1 typeb= 26)
+ found     633 non-vanashing integrals ( typea=  1 typeb= 27)
+ found     642 non-vanashing integrals ( typea=  1 typeb= 28)
+ found     922 non-vanashing integrals ( typea=  1 typeb= 29)
+ found     956 non-vanashing integrals ( typea=  1 typeb= 30)
+ found    1007 non-vanashing integrals ( typea=  1 typeb= 31)
+ found     957 non-vanashing integrals ( typea=  1 typeb= 32)
+ found    1001 non-vanashing integrals ( typea=  1 typeb= 33)
+
+
+ found     954 non-vanashing integrals ( typea=  2 typeb=  6)
+ found     619 non-vanashing integrals ( typea=  2 typeb=  7)
+ found     504 non-vanashing integrals ( typea=  2 typeb=  8)
+
+
+
+
+ ************************************************************************
+ ************************** Output from TWOINT **************************
+ ************************************************************************
+
+
+ Number of two-electron integrals written:   1352078 (25.8%)
+ Kilobytes written:                            21670
+
+
+
+
+ >>>> Total CPU  time used in HERMIT:   0.33 seconds
+ >>>> Total wall time used in HERMIT:   1.00 seconds
+
+- End of Integral Section

@@ -1,0 +1,57 @@
+end of hernew
+ IGNORING BNDCHK
+*** End of DALTON calculation ***
+end of mcdrt
+end of mcuft
+end of mcscf
+end of mcpc
+end of cidrt
+ prnopt=                     0
+end of tran
+global arrays:              132263001   (           1009.09 MB)
+vdisk:                              0   (              0.00 MB)
+drt:                         59999994   (            228.88 MB)
+================================================================================
+ bummer (warning):resetting fileloc for seriel operation0
+ Main memory management:
+ global                1 DP per process
+ vdisk                 0 DP per process
+ stack                 0 DP per process
+ core          655359999 DP per process
+
+ intermediate da file sorting parameters:
+ nbuk=   2 lendar=  524288 nipbk=  349524 nipsg= 654363324
+  waiting after driverwrap ....                     0
+ Allocating              655359999  for ci step ...
+ bummer (warning):overlap matrix: # small eigenvalues=1
+ bummer (warning):overlap matrix: # small eigenvalues=2
+ THREXT                     0
+ THREXT                     0
+ d2temp rec #1
+ d2temp 20 rec #                     2
+ d2temp 215 rec #                     3
+ d2temp 215 rec #                     4
+ d2temp 215 rec #                     5
+ d2temp 215 rec #                     6
+ d2temp 40 rec #                     7
+ d2temp 150 rec #                     8
+ DA1 ...
+ DA2 ...
+ DA3 ...
+ DA4 ...
+ DA5 ...
+end of ciudg
+ numv1=                 61949
+end of cipc
+end of cidrt
+ prnopt=                     0
+end of tran
+ allocate: status=                     0
+end of cigrd
+ prnopt=                     0
+end of tran
+  SKIPPING TWOEXP ....
+ IGNORING BNDCHK
+*** End of DALTON calculation ***
+ bummer (fatal):mprim .gt.18
+bummer

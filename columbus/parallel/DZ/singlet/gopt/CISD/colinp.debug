@@ -1,0 +1,5 @@
+INC=/usr/local/chem.sw/Columbus/CPAN /usr/local/chem.sw/Columbus/perlscripts CODE(0x1901c70)
+Perlversion:5.012004
+choice=geom
+intprogram=hermit
+

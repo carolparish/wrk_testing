@@ -1,0 +1,7 @@
+parm Bound_iGluN2A_APO_solv.complex.prmtop
+trajin Bound_iGluN2A_APO_solv.complex.inpcrd
+
+autoimage
+strip :WAT:Cl-:Na+
+trajout Bound_iGluN2A_APO_0ns.pdb
+go

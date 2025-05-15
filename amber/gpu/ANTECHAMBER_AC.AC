@@ -1,0 +1,35 @@
+CHARGE     -2.00 ( -2 )
+Formula: H7 C5 N1 O4 
+ATOM      1  N   GLU   280      42.826  42.601  39.966  0.000000        n3
+ATOM      2  CA  GLU   280      42.396  41.210  39.713  0.000000        c3
+ATOM      3  C   GLU   280      40.878  40.897  39.994  0.000000        c2
+ATOM      4  O   GLU   280      40.166  41.824  40.448  0.000000         o
+ATOM      5  CB  GLU   280      43.297  40.178  40.452  0.000000        c3
+ATOM      6  CG  GLU   280      44.685  39.968  39.831  0.000000        c3
+ATOM      7  CD  GLU   280      44.709  39.425  38.394  0.000000        c2
+ATOM      8  OE1 GLU   280      45.761  39.601  37.749  0.000000         o
+ATOM      9  OE2 GLU   280      43.716  38.809  37.953  0.000000         o
+ATOM     10  OXT GLU   280      40.512  39.740  39.678  0.000000         o
+ATOM     11  H1  GLU   280      43.550  42.870  39.311  0.000000        hn
+ATOM     12  H2  GLU   280      42.058  43.232  39.776  0.000000        hn
+ATOM     13  HA  GLU   280      42.477  41.057  38.638  0.000000        h1
+ATOM     14  HB3 GLU   280      42.836  39.195  40.555  0.000000        hc
+ATOM     15  HB2 GLU   280      43.449  40.525  41.472  0.000000        hc
+ATOM     16  HG3 GLU   280      45.207  39.241  40.447  0.000000        hc
+ATOM     17  HG2 GLU   280      45.259  40.892  39.901  0.000000        hc
+BOND    1    1    2    0      N   CA
+BOND    2    1   11    0      N   H1
+BOND    3    1   12    0      N   H2
+BOND    4    2    3    0     CA    C
+BOND    5    2    5    0     CA   CB
+BOND    6    2   13    0     CA   HA
+BOND    7    3    4    0      C    O
+BOND    8    3   10    0      C  OXT
+BOND    9    5    6    0     CB   CG
+BOND   10    5   14    0     CB  HB3
+BOND   11    5   15    0     CB  HB2
+BOND   12    6    7    0     CG   CD
+BOND   13    6   16    0     CG  HG3
+BOND   14    6   17    0     CG  HG2
+BOND   15    7    8    0     CD  OE1
+BOND   16    7    9    0     CD  OE2

@@ -1,0 +1,207 @@
+
+&& iteration number 1 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+ 
+
+     ******************************************
+     **    PROGRAM:              MCPC        **
+     **    PROGRAM VERSION:      5.5         **
+     **    DISTRIBUTION VERSION: 5.9.a       **
+     ******************************************
+
+
+ original author: Daniel Robertson, FSU
+ later revisions: Ron Shepard, ANL;
+                  Michal Dallos, University Vienna
+
+
+
+ This Version of Program mcpc is Maintained by:
+     Thomas Mueller
+     Juelich Supercomputing Centre (JSC)
+     Institute of Advanced Simulation (IAS)
+     D-52425 Juelich, Germany 
+     Email: th.mueller@fz-juelich.de
+
+
+
+   ******  File header section  ******
+
+ Headers form the restart file:
+    Hermit Integral Program : SIFS version  erica.richmond.ed 14:10:04.001 27-Jun-24
+     title                                                                          
+
+
+   ******  DRT info section  ******
+
+ Informations for the DRT no.  1
+ Header form the DRT file: 
+     title                                                                          
+ Molecular symmetry group:   sym1
+ Total number of electrons:   34
+ Spin multiplicity:            1
+ Number of active orbitals:    7
+ Number of active electrons:   8
+ Total number of CSFs:       139
+
+   ***  Informations from the DRT number:   1
+
+ 
+ Symmetry orbital summary:
+ Symm.blocks:         1     2     3     4
+ Symm.labels:         a1    b1    b2    a2 
+
+ List of doubly occupied orbitals:
+  1 a1   2 a1   3 a1   4 a1   5 a1   6 a1   7 a1   8 a1   1 b2   2 b2   3 b2   4 b2 
+  5 b2 
+
+ List of active orbitals:
+  9 a1   1 b1   2 b1   3 b1   6 b2   1 a2   2 a2 
+
+
+   ******  MCSCF convergence information:  ******
+
+ MCSCF convergence criteria were satisfied.
+
+ mcscf energy=  -227.3899783199    nuclear repulsion=   145.8867020165
+ demc=             0.0000000029    wnorm=                 0.0000008721
+ knorm=            0.0000007904    apxde=                 0.0000000000
+
+
+ MCSCF calculation performmed for   1 symmetry.
+
+ State averaging:
+ No,  ssym, navst, wavst
+  1    a1     1   1.0000
+
+ Input the DRT No of interest: [  1]:
+In the DRT No.: 1 there are  1 states.
+
+ Which one to take? [  1]:
+ The CSFs for the state No  1 of the symmetry  a1  will be printed
+ according to the following print options :
+
+ 1) print csf info by sorted index number.
+ 2) print csf info by contribution threshold.
+ 3) print csf info by csf number.
+ 4) set additional print options.
+ 5) print the entire sorted csf vector.
+ 6) print the entire csf vector.
+ 7) print the mcscf molecular orbitals.
+ 8) print the mcscf natural orbitals and occupation numbers.
+ 9) export wave function files for cioverlap (all states).
+ 0) end.
+
+ input menu number [  0]: csfs will be printed based on coefficient magnitudes.
+
+ input the coefficient threshold (end with 0.) [ 0.0000]:
+ List of active orbitals:
+  9 a1   1 b1   2 b1   3 b1   6 b2   1 a2   2 a2 
+
+   csf       coeff       coeff**2    step(*)
+  -----  ------------  ------------  ------------
+      3 -0.8580611921  0.7362690094  3330030
+    107  0.4037034806  0.1629765002  0330330
+      1  0.1625653564  0.0264274951  3333000
+     63 -0.1235662638  0.0152686215  1320132
+      8 -0.1208889856  0.0146141468  3312012
+     57 -0.0823635255  0.0067837503  1332120
+     18  0.0738419993  0.0054526409  3300033
+    103 -0.0737178230  0.0054343174  0333300
+     10  0.0638274366  0.0040739417  3311022
+    112  0.0634750305  0.0040290795  0312312
+    120 -0.0499258703  0.0024925925  0300333
+      5  0.0494548107  0.0024457783  3330003
+     12  0.0449690540  0.0020222158  3303030
+     23  0.0413392057  0.0017089299  3131022
+     40  0.0403015709  0.0016242166  3033030
+     59 -0.0362102146  0.0013111796  1331220
+    115 -0.0338742386  0.0011474640  0311322
+     62 -0.0275304654  0.0007579265  1323102
+     14 -0.0264831579  0.0007013577  3303003
+    109 -0.0233222110  0.0005439255  0330303
+     15  0.0214249827  0.0004590299  3300330
+    116 -0.0208631434  0.0004352708  0303330
+    125 -0.0190724575  0.0003637586  0131322
+     67  0.0181745459  0.0003303141  1310232
+    133 -0.0173862688  0.0003022823  0033330
+     25 -0.0162913173  0.0002654070  3123030
+    118  0.0156304686  0.0002443115  0303303
+     70 -0.0148923137  0.0002217810  1302123
+    108 -0.0111517053  0.0001243605  0330312
+    111 -0.0110893143  0.0001229729  0312330
+    110  0.0110430738  0.0001219495  0330033
+     61  0.0089443683  0.0000800017  1323120
+     58  0.0072043911  0.0000519033  1332102
+     26 -0.0070676572  0.0000499518  3123012
+     72 -0.0063378809  0.0000401687  1301223
+    126  0.0063097328  0.0000398127  0123330
+     85 -0.0061138090  0.0000373787  1130232
+     60 -0.0060181593  0.0000362182  1331202
+     31  0.0058323549  0.0000340164  3120033
+      7 -0.0057407139  0.0000329558  3312030
+     21  0.0057323029  0.0000328593  3132012
+     65 -0.0056662568  0.0000321065  1313220
+     99 -0.0055134783  0.0000303984  1023132
+      9 -0.0054481460  0.0000296823  3312003
+     75  0.0052889672  0.0000279732  1230132
+     11 -0.0047305770  0.0000223784  3303300
+     13 -0.0045758067  0.0000209380  3303012
+     16  0.0045128976  0.0000203662  3300312
+      4 -0.0044635244  0.0000199231  3330012
+     41  0.0041673384  0.0000173667  3033012
+    127  0.0041030115  0.0000168347  0123312
+     32 -0.0038624420  0.0000149185  3113022
+     95  0.0037503496  0.0000140651  1032132
+      6  0.0037161859  0.0000138100  3312300
+     90 -0.0036662702  0.0000134415  1121223
+    121  0.0035979716  0.0000129454  0132330
+     89  0.0035334919  0.0000124856  1121232
+     42 -0.0035049331  0.0000122846  3033003
+     20  0.0035031933  0.0000122724  3132030
+     55 -0.0033749839  0.0000113905  3003033
+     87 -0.0032827005  0.0000107761  1122132
+     77 -0.0031211639  0.0000097417  1212132
+     73 -0.0030053266  0.0000090320  1233120
+     91  0.0029583557  0.0000087519  1112232
+    122 -0.0028604218  0.0000081820  0132312
+    114  0.0027914279  0.0000077921  0312033
+    106 -0.0025094067  0.0000062971  0333003
+    131  0.0024661363  0.0000060818  0113322
+     46  0.0023958716  0.0000057402  3030033
+    130 -0.0022332436  0.0000049874  0120333
+    105  0.0021585365  0.0000046593  0333012
+    139  0.0021084952  0.0000044458  0003333
+     83 -0.0019345851  0.0000037426  1133220
+     80  0.0016803834  0.0000028237  1211223
+    135  0.0016038280  0.0000025723  0033303
+    134 -0.0015542366  0.0000024157  0033312
+      2  0.0015337927  0.0000023525  3330300
+     22 -0.0014627153  0.0000021395  3132003
+     28 -0.0014530959  0.0000021115  3120330
+     97 -0.0014192752  0.0000020143  1031232
+     81  0.0013022546  0.0000016959  1203132
+     47  0.0012619923  0.0000015926  3012330
+     69 -0.0012571347  0.0000015804  1302132
+    101  0.0012068196  0.0000014564  1013232
+     86  0.0011553998  0.0000013349  1130223
+    132  0.0011492522  0.0000013208  0102333
+     92 -0.0010756141  0.0000011569  1112223
+     52 -0.0010565558  0.0000011163  3003330
+     50  0.0010539934  0.0000011109  3012033
+    138 -0.0010530699  0.0000011090  0012333
+     84 -0.0010412510  0.0000010842  1133202
+
+ input the coefficient threshold (end with 0.) [ 0.0000]:
+ 1) print csf info by sorted index number.
+ 2) print csf info by contribution threshold.
+ 3) print csf info by csf number.
+ 4) set additional print options.
+ 5) print the entire sorted csf vector.
+ 6) print the entire csf vector.
+ 7) print the mcscf molecular orbitals.
+ 8) print the mcscf natural orbitals and occupation numbers.
+ 9) export wave function files for cioverlap (all states).
+ 0) end.
+
+ input menu number [  0]:

@@ -1,0 +1,959 @@
+
+&& iteration number 1 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+ 
+
+     ******************************************
+     **    PROGRAM:              MCSCF       **
+     **    PROGRAM VERSION:      5.5         **
+     **    DISTRIBUTION VERSION: 5.9.a       **
+     ******************************************
+
+ This program allows the csf mixing coefficient and orbital expansion coefficient
+ optimization using the graphical unitary group approach and the exponential
+ operator mcscf method.
+ references:  r. shepard and j. simons, ' int. j. quantum chem. symp. 14, 211 (1980).
+              r. shepard, i. shavitt, and j. simons, j. chem. phys. 76, 543 (1982).
+              r. shepard in "ab initio methods in quantum chemistry ii" advances in chemical
+                  physics 69, edited by k. p. lawley (wiley, new york, 1987) pp. 63-200.
+ Original autor: Ron Shepard, ANL
+ Later revisions: Michal Dallos, University Vienna
+
+ This Version of Program MCSCF is Maintained by:
+     Thomas Mueller
+     Juelich Supercomputing Centre (JSC)
+     Institute of Advanced Simulation (IAS)
+     D-52425 Juelich, Germany 
+     Email: th.mueller@fz-juelich.de
+
+
+
+     ******************************************
+     **    PROGRAM:              MCSCF       **
+     **    PROGRAM VERSION:      5.4.0.2     **
+     **    DISTRIBUTION VERSION: 5.9.a       **
+     ******************************************
+
+ Workspace allocation information:
+       393216000 of real*8 words ( 3000.00 MB) of work space has been allocated.
+
+ user input information:
+
+ ======== echo of the mcscf input ========
+ ------------------------------------------------------------------------
+  &input
+   niter=100,
+   nmiter=50,
+   nciitr=300,
+   tol(3)=1.e-5,
+   tol(2)=1.e-5,
+   tol(1)=1.e-8,
+   NSTATE=0,
+   npath=1,3,9,10,13,17,19,21,-11,12, 2,
+   ncoupl=5,
+   tol(9)=1.e-3,
+   FCIORB=  1,9,20,2,1,20,2,2,20,2,3,20,3,6,20,4,1,20,4,2,20
+   NAVST(1) = 1,
+   WAVST(1,1)=1 ,
+  &end
+ ------------------------------------------------------------------------
+
+
+ ***  Integral file informations  ***
+
+
+ input integral file : /home/ab9tm/columbus_training/DZ/singlet/gopt/MCSCF/WORK/
+ aoi
+
+ Integral file header information:
+ Hermit Integral Program : SIFS version  erica.richmond.ed 14:10:04.001 27-Jun-24
+
+ Core type energy values:
+ energy( 1)=  1.458867020165E+02, ietype=   -1,    core energy of type: Nuc.Rep.
+ total ao core energy =  145.886702016
+
+
+   ******  Basis set information:  ******
+
+ Number of irreps:                  4
+ Total number of basis functions:  80
+
+ irrep no.              1    2    3    4
+ irrep label           A1   B1   B2   A2 
+ no. of bas.fcions.    31   12   27   10
+
+
+ ***  MCSCF optimization procedure parmeters:  ***
+
+
+ maximum number of mcscf iterations:        niter=   100
+
+ maximum number of psci micro-iterations:   nmiter=   50
+ maximum r,s subspace dimension allowed:    nvrsmx=   30
+
+ tol(1)=  1.0000E-08. . . . delta-emc convergence criterion.
+ tol(2)=  1.0000E-05. . . . wnorm convergence criterion.
+ tol(3)=  1.0000E-05. . . . knorm convergence criterion.
+ tol(4)=  1.0000E-08. . . . apxde convergence criterion.
+ tol(5)=  1.0000E-04. . . . small diagonal matrix element tolerance.
+ tol(6)=  1.0000E-06. . . . minimum ci-psci residual norm.
+ tol(7)=  1.0000E-05. . . . maximum ci-psci residual norm.
+ tol(8)=  1.0000E+00. . . . maximum abs(k(xy)) allowed.
+ tol(9)=  1.0000E-03. . . . wnorm coupling tolerance.
+ tol(10)= 0.0000E+00. . . . maximum psci emergency shift parameter.
+ tol(11)= 0.0000E+00. . . . minimum psci emergency shift parameter.
+ tol(12)= 0.0000E+00. . . . increment of psci emergency shift parameter.
+
+
+ *** State averaging informations: ***
+
+
+ MCSCF calculation performed for  1 DRT.
+
+ DRT  first state   no.of aver.states   weights
+  1   ground state          1             1.000
+
+ The number of hmc(*) eigenvalues and eigenvectors calculated each iteration per DRT:
+ DRT.   no.of eigenv.(=ncol)
+    1        2
+
+ orbital coefficients are optimized for the ground state (nstate=0).
+
+ Orbitals included in invariant subspaces:
+   symmetry   orbital   mask
+       1       9(  9)    20
+       2       1( 32)    20
+       2       2( 33)    20
+       2       3( 34)    20
+       3       6( 49)    20
+       4       1( 71)    20
+       4       2( 72)    20
+
+ npath(*) options:
+  2:  orbital-state coupling terms will be included beginning on iteration ncoupl=  5
+  3:  print intermediate timing information.
+  9:  suppress the drt listing.
+ 10:  suppress the hmc(*) eigenvector listing.
+ 12:  diagonalize the hmc(*) matrix iteratively.
+        nunitv= 1 nciitr=** mxvadd=20 nvcimx=20
+       rtolci(*),wnorm=     1.0000E-02 1.0000E-02 1.0000E-02 1.0000E-02 1.0000E-02 1.0000E-02 1.0000E-02 1.0000E-02
+                            1.0000E-02 1.0000E-02 1.0000E-02 1.0000E-02 1.0000E-02 1.0000E-02 1.0000E-02 1.0000E-02
+                            1.0000E-02 1.0000E-02 1.0000E-02 1.0000E-02 1.0000E-02 1.0000E-02 1.0000E-02 1.0000E-02
+                            1.0000E-02 1.0000E-02 1.0000E-02 1.0000E-02 1.0000E-02 1.0000E-02 1.0000E-02 1.0000E-02
+                            1.0000E-02 1.0000E-02 1.0000E-02 1.0000E-02 1.0000E-02 1.0000E-02 1.0000E-02 1.0000E-02
+                            1.0000E-02 1.0000E-02 1.0000E-02 1.0000E-02 1.0000E-02 1.0000E-02 1.0000E-02 1.0000E-02
+                            1.0000E-02 1.0000E-02 0.0000E+00
+   noldv =   0
+ 13:  get initial orbitals from the formatted file, mocoef.
+ 17:  print the final natural orbitals and occupations.
+ 19:  transform the virtual orbitals to diagonalize qvv(*).
+ 21:  write out the one- and two- electron density for further use (files:mcd1fl, mcd2fl).
+
+
+   ******  DRT info section  ******
+
+
+ Informations for the DRT no.  1
+
+ DRT file header:
+  title                                                                          
+ Molecular symmetry group:    a1 
+ Total number of electrons:   34
+ Spin multiplicity:            1
+ Number of active orbitals:    7
+ Number of active electrons:   8
+ Total number of CSFs:       139
+ 
+
+ faar:   0 active-active rotations allowed out of:   4 possible.
+
+
+ Number of active-double rotations:        13
+ Number of active-active rotations:         0
+ Number of double-virtual rotations:      281
+ Number of active-virtual rotations:       86
+ lenbfsdef=                131071  lenbfs=                  1070
+  number of integrals per class 1:11 (cf adda 
+ class  1 (pq|rs):         #         124
+ class  2 (pq|ri):         #         559
+ class  3 (pq|ia):         #        6142
+ class  4 (pi|qa):         #       10317
+ class  5 (pq|ra):         #        2786
+ class  6 (pq|ij)/(pi|qj): #        2380
+ class  7 (pq|ab):         #       13608
+ class  8 (pa|qb):         #       26556
+ class  9 p(bp,ai)         #       24166
+ class 10p(ai,jp):        #        3653
+ class 11p(ai,bj):        #       42519
+
+ Size of orbital-Hessian matrix B:                    75931
+ Size of the orbital-state Hessian matrix C:          52820
+ Total size of the state Hessian matrix M:                0
+ Size of HESSIAN-matrix for quadratic conv.:         128751
+
+
+ Source of the initial MO coeficients:
+
+ Input MO coefficient file: /home/ab9tm/columbus_training/DZ/singlet/gopt/MCSCF/WORK/moc
+ 
+
+               starting mcscf iteration...   1
+
+ orbital-state coupling will not be calculated this iteration.
+
+ *** Starting integral transformation ***
+
+ module tranlib input parameters:
+
+ prnopt    =     1, chkopt    =     0,ortopt    =     0, denopt    =     0
+ mapin(1 ) =     1, nsymao    =     4, naopsy(1) =    31, freeze(1) =     1
+ mapout(1) =     1, nsymmo    =    -1, nmopsy(1) =    -1, fsplit    =     1
+ outlab    =     0, seward    =     0, lumorb    =     0, DALTON2   =     0
+ nextint   =     2
+ LDAMIN    =   127, LDAMAX    = 64959, LDAINC    =    64
+ LRC1MX    =    -1, LRC2MX    =    -1, LRCSCR    = 65000
+
+ THRESH    =  5.0000E-12  [cutoff threshold]
+
+ module tranlib: workspace lcore= 393198635
+
+ inoutp: segmentation information:
+ in-core transformation space,   avcinc = 393030260
+ address segment size,           sizesg = 392878774
+ number of in-core blocks,       nincbk =        19
+ number of out-of-core blocks,   noutbk =         0
+ number of in-core segments,     incseg =         1
+ number of out-of-core segments, outseg =         0
+ trmain:     363948 transformed 1/r12    array elements were written in      67 records.
+
+
+ mosort: allocated sort2 space, avc2is=   393060488 available sort2 space, avcisx=   393060740
+
+ trial vectors are generated internally.
+
+ trial vector  1 is unit matrix column     3
+ ciiter=  18 noldhv= 11 noldv= 11
+
+ Eigenvalues of the hmc(*) matrix
+             total energy     electronic energy      residual norm          rtolci(*)
+    1*     -227.2750482835     -373.1617503000        0.0000005788        0.0000010000
+    2      -227.0860219499     -372.9727239664        0.0083647926        0.0100000000
+ 
+  tol(10)=  0.000000000000000E+000  eshsci=  7.363224511630559E-002
+ Total number of micro iterations:    9
+
+ ***  micro: final psci convergence values:  ***
+    imxov=  1 z0=-0.86996262 pnorm= 0.0000E+00 rznorm= 2.8881E-06 rpnorm= 0.0000E+00 noldr=  9 nnewr=  9 nolds=  0 nnews=  0
+ 
+
+ fdd(*) eigenvalues. symmetry block  1
+   -41.252186  -22.626705  -22.502358   -2.934231   -2.157789   -1.550428   -1.376047   -1.055544
+
+ qvv(*) eigenvalues. symmetry block  1
+     0.425529    0.686995    0.872983    1.198621    1.240550    1.524863    1.556196    1.792078    1.982584    2.291485
+     2.550316    2.844243    3.460940    3.659824    4.091699    4.152688    4.267103    4.572938    5.207057    5.719148
+     6.948451    7.488061
+
+ qvv(*) eigenvalues. symmetry block  2
+     1.317523    1.484292    2.204029    2.448252    2.706542    3.187637    3.668618    4.244489    6.471068
+
+ fdd(*) eigenvalues. symmetry block  3
+   -22.626782  -22.498666   -2.000202   -1.512245   -1.223881
+
+ qvv(*) eigenvalues. symmetry block  3
+     0.446161    0.733975    0.986350    1.084791    1.392111    1.541285    1.782387    1.974920    2.192185    2.382606
+     2.947907    3.204573    3.484888    3.932834    4.267446    4.427128    4.986775    5.217476    5.411512    6.316849
+     7.499248
+
+ qvv(*) eigenvalues. symmetry block  4
+     1.420570    1.683768    2.707816    2.725256    3.840650    4.319951    4.630724    6.563700
+
+ restrt: restart information saved on the restart file (unit= 13).
+
+ not all mcscf convergence criteria are satisfied.
+ iter=    1 emc=   -227.2750482835 demc= 2.2728E+02 wnorm= 5.8906E-01 knorm= 4.9312E-01 apxde= 5.7888E-02    *not conv.*     
+
+               starting mcscf iteration...   2
+
+ orbital-state coupling will not be calculated this iteration.
+
+ *** Starting integral transformation ***
+
+ module tranlib input parameters:
+
+ prnopt    =     1, chkopt    =     0,ortopt    =     0, denopt    =     0
+ mapin(1 ) =     1, nsymao    =     4, naopsy(1) =    31, freeze(1) =     1
+ mapout(1) =     1, nsymmo    =    -1, nmopsy(1) =    -1, fsplit    =     1
+ outlab    =     0, seward    =     0, lumorb    =     0, DALTON2   =     0
+ nextint   =     2
+ LDAMIN    =   127, LDAMAX    = 64959, LDAINC    =    64
+ LRC1MX    =    -1, LRC2MX    =    -1, LRCSCR    = 65000
+
+ THRESH    =  5.0000E-12  [cutoff threshold]
+
+ module tranlib: workspace lcore= 393198635
+
+ inoutp: segmentation information:
+ in-core transformation space,   avcinc = 393030260
+ address segment size,           sizesg = 392878774
+ number of in-core blocks,       nincbk =        19
+ number of out-of-core blocks,   noutbk =         0
+ number of in-core segments,     incseg =         1
+ number of out-of-core segments, outseg =         0
+ trmain:     363949 transformed 1/r12    array elements were written in      67 records.
+
+
+ mosort: allocated sort2 space, avc2is=   393060488 available sort2 space, avcisx=   393060740
+
+   2 trial vectors read from nvfile (unit= 29).
+ ciiter=  11 noldhv= 18 noldv= 18
+
+ Eigenvalues of the hmc(*) matrix
+             total energy     electronic energy      residual norm          rtolci(*)
+    1*     -227.3689433019     -373.2556453183        0.0000050001        0.0000100000
+    2      -227.1694425031     -373.0561445196        0.0063697750        0.0100000000
+ 
+  tol(10)=  0.000000000000000E+000  eshsci=  2.312919469795127E-002
+ Total number of micro iterations:    9
+
+ ***  micro: final psci convergence values:  ***
+    imxov=  1 z0= 0.95714967 pnorm= 0.0000E+00 rznorm= 5.5810E-06 rpnorm= 0.0000E+00 noldr=  9 nnewr=  9 nolds=  0 nnews=  0
+ 
+
+ fdd(*) eigenvalues. symmetry block  1
+   -41.270617  -22.628583  -22.532673   -2.959572   -2.208979   -1.590377   -1.411646   -1.111531
+
+ qvv(*) eigenvalues. symmetry block  1
+     0.421541    0.677019    0.878810    1.190832    1.250328    1.505950    1.535634    1.773446    1.977554    2.282737
+     2.540444    2.828713    3.447033    3.646016    4.075282    4.137736    4.254905    4.556545    5.191482    5.704971
+     6.930584    7.470355
+
+ qvv(*) eigenvalues. symmetry block  2
+     1.300691    1.458093    2.182204    2.427455    2.688245    3.172413    3.654455    4.228924    6.451136
+
+ fdd(*) eigenvalues. symmetry block  3
+   -22.628667  -22.529413   -2.021016   -1.531649   -1.237378
+
+ qvv(*) eigenvalues. symmetry block  3
+     0.441086    0.738571    0.980896    1.088129    1.375070    1.536402    1.771819    1.922526    2.191152    2.369154
+     2.943781    3.187228    3.474685    3.920577    4.245228    4.406787    4.974557    5.211188    5.397710    6.300508
+     7.483274
+
+ qvv(*) eigenvalues. symmetry block  4
+     1.407830    1.648522    2.691376    2.710606    3.824627    4.311975    4.615154    6.548767
+
+ restrt: restart information saved on the restart file (unit= 13).
+
+ not all mcscf convergence criteria are satisfied.
+ iter=    2 emc=   -227.3689433019 demc= 9.3895E-02 wnorm= 1.8503E-01 knorm= 2.8959E-01 apxde= 1.7804E-02    *not conv.*     
+
+               starting mcscf iteration...   3
+
+ orbital-state coupling will not be calculated this iteration.
+
+ *** Starting integral transformation ***
+
+ module tranlib input parameters:
+
+ prnopt    =     1, chkopt    =     0,ortopt    =     0, denopt    =     0
+ mapin(1 ) =     1, nsymao    =     4, naopsy(1) =    31, freeze(1) =     1
+ mapout(1) =     1, nsymmo    =    -1, nmopsy(1) =    -1, fsplit    =     1
+ outlab    =     0, seward    =     0, lumorb    =     0, DALTON2   =     0
+ nextint   =     2
+ LDAMIN    =   127, LDAMAX    = 64959, LDAINC    =    64
+ LRC1MX    =    -1, LRC2MX    =    -1, LRCSCR    = 65000
+
+ THRESH    =  5.0000E-12  [cutoff threshold]
+
+ module tranlib: workspace lcore= 393198635
+
+ inoutp: segmentation information:
+ in-core transformation space,   avcinc = 393030260
+ address segment size,           sizesg = 392878774
+ number of in-core blocks,       nincbk =        19
+ number of out-of-core blocks,   noutbk =         0
+ number of in-core segments,     incseg =         1
+ number of out-of-core segments, outseg =         0
+ trmain:     363949 transformed 1/r12    array elements were written in      67 records.
+
+
+ mosort: allocated sort2 space, avc2is=   393060488 available sort2 space, avcisx=   393060740
+
+   2 trial vectors read from nvfile (unit= 29).
+ ciiter=  11 noldhv= 18 noldv= 18
+
+ Eigenvalues of the hmc(*) matrix
+             total energy     electronic energy      residual norm          rtolci(*)
+    1*     -227.3892617899     -373.2759638064        0.0000081463        0.0000100000
+    2      -227.1800192145     -373.0667212309        0.0094370275        0.0100000000
+ 
+  tol(10)=  0.000000000000000E+000  eshsci=  4.096002687570390E-003
+ Total number of micro iterations:    8
+
+ ***  micro: final psci convergence values:  ***
+    imxov=  1 z0= 0.99758555 pnorm= 0.0000E+00 rznorm= 7.6300E-06 rpnorm= 0.0000E+00 noldr=  8 nnewr=  8 nolds=  0 nnews=  0
+ 
+
+ fdd(*) eigenvalues. symmetry block  1
+   -41.258938  -22.606122  -22.505887   -2.948141   -2.188686   -1.581561   -1.377065   -1.108742
+
+ qvv(*) eigenvalues. symmetry block  1
+     0.427390    0.684983    0.876978    1.198285    1.258368    1.511701    1.545595    1.782917    1.982940    2.289177
+     2.550124    2.836488    3.454958    3.656064    4.083689    4.146468    4.263724    4.565938    5.202637    5.715828
+     6.941755    7.481628
+
+ qvv(*) eigenvalues. symmetry block  2
+     1.300728    1.431240    2.190496    2.433459    2.696187    3.180412    3.660378    4.237301    6.461572
+
+ fdd(*) eigenvalues. symmetry block  3
+   -22.606208  -22.502449   -2.009285   -1.519474   -1.226403
+
+ qvv(*) eigenvalues. symmetry block  3
+     0.446414    0.742341    0.986342    1.090215    1.380179    1.544368    1.786216    1.938011    2.195887    2.377096
+     2.948343    3.198088    3.484319    3.929976    4.257640    4.418480    4.983584    5.220280    5.409773    6.311524
+     7.495145
+
+ qvv(*) eigenvalues. symmetry block  4
+     1.415302    1.588582    2.699351    2.718130    3.832596    4.319480    4.623203    6.559802
+
+ restrt: restart information saved on the restart file (unit= 13).
+
+ not all mcscf convergence criteria are satisfied.
+ iter=    3 emc=   -227.3892617899 demc= 2.0318E-02 wnorm= 3.2768E-02 knorm= 6.9448E-02 apxde= 6.6538E-04    *not conv.*     
+
+               starting mcscf iteration...   4
+
+ orbital-state coupling will not be calculated this iteration.
+
+ *** Starting integral transformation ***
+
+ module tranlib input parameters:
+
+ prnopt    =     1, chkopt    =     0,ortopt    =     0, denopt    =     0
+ mapin(1 ) =     1, nsymao    =     4, naopsy(1) =    31, freeze(1) =     1
+ mapout(1) =     1, nsymmo    =    -1, nmopsy(1) =    -1, fsplit    =     1
+ outlab    =     0, seward    =     0, lumorb    =     0, DALTON2   =     0
+ nextint   =     2
+ LDAMIN    =   127, LDAMAX    = 64959, LDAINC    =    64
+ LRC1MX    =    -1, LRC2MX    =    -1, LRCSCR    = 65000
+
+ THRESH    =  5.0000E-12  [cutoff threshold]
+
+ module tranlib: workspace lcore= 393198635
+
+ inoutp: segmentation information:
+ in-core transformation space,   avcinc = 393030260
+ address segment size,           sizesg = 392878774
+ number of in-core blocks,       nincbk =        19
+ number of out-of-core blocks,   noutbk =         0
+ number of in-core segments,     incseg =         1
+ number of out-of-core segments, outseg =         0
+ trmain:     363949 transformed 1/r12    array elements were written in      67 records.
+
+
+ mosort: allocated sort2 space, avc2is=   393060488 available sort2 space, avcisx=   393060740
+
+   2 trial vectors read from nvfile (unit= 29).
+ ciiter=  14 noldhv=  4 noldv=  4
+
+ Eigenvalues of the hmc(*) matrix
+             total energy     electronic energy      residual norm          rtolci(*)
+    1*     -227.3899696525     -373.2766716690        0.0000004086        0.0000010000
+    2      -227.1769372269     -373.0636392434        0.0038979474        0.0100000000
+ 
+  tol(10)=  0.000000000000000E+000  eshsci=  6.685896034547477E-004
+ Total number of micro iterations:    7
+
+ ***  micro: final psci convergence values:  ***
+    imxov=  1 z0=-0.99998432 pnorm= 0.0000E+00 rznorm= 1.6736E-06 rpnorm= 0.0000E+00 noldr=  7 nnewr=  7 nolds=  0 nnews=  0
+ 
+
+ fdd(*) eigenvalues. symmetry block  1
+   -41.257738  -22.600307  -22.499916   -2.945768   -2.183865   -1.578159   -1.371485   -1.105995
+
+ qvv(*) eigenvalues. symmetry block  1
+     0.428296    0.686536    0.877651    1.200010    1.260079    1.513784    1.547816    1.785335    1.984294    2.290955
+     2.551817    2.838635    3.456827    3.657965    4.086175    4.148767    4.266024    4.567778    5.205088    5.718100
+     6.943888    7.483762
+
+ qvv(*) eigenvalues. symmetry block  2
+     1.297495    1.420336    2.192753    2.435671    2.698283    3.182298    3.661508    4.239270    6.463509
+
+ fdd(*) eigenvalues. symmetry block  3
+   -22.600393  -22.496464   -2.006682   -1.516822   -1.224117
+
+ qvv(*) eigenvalues. symmetry block  3
+     0.447408    0.742407    0.988367    1.090275    1.382242    1.546235    1.790220    1.945544    2.197076    2.378580
+     2.949922    3.200121    3.486146    3.932401    4.260196    4.420907    4.986060    5.222559    5.412394    6.314055
+     7.497329
+
+ qvv(*) eigenvalues. symmetry block  4
+     1.416315    1.557242    2.700727    2.718292    3.834482    4.321355    4.625276    6.561759
+
+ restrt: restart information saved on the restart file (unit= 13).
+
+ not all mcscf convergence criteria are satisfied.
+ iter=    4 emc=   -227.3899696525 demc= 7.0786E-04 wnorm= 5.3487E-03 knorm= 5.5999E-03 apxde= 6.7140E-06    *not conv.*     
+
+               starting mcscf iteration...   5
+
+ orbital-state coupling will not be calculated this iteration.
+
+ *** Starting integral transformation ***
+
+ module tranlib input parameters:
+
+ prnopt    =     1, chkopt    =     0,ortopt    =     0, denopt    =     0
+ mapin(1 ) =     1, nsymao    =     4, naopsy(1) =    31, freeze(1) =     1
+ mapout(1) =     1, nsymmo    =    -1, nmopsy(1) =    -1, fsplit    =     1
+ outlab    =     0, seward    =     0, lumorb    =     0, DALTON2   =     0
+ nextint   =     2
+ LDAMIN    =   127, LDAMAX    = 64959, LDAINC    =    64
+ LRC1MX    =    -1, LRC2MX    =    -1, LRCSCR    = 65000
+
+ THRESH    =  5.0000E-12  [cutoff threshold]
+
+ module tranlib: workspace lcore= 393198635
+
+ inoutp: segmentation information:
+ in-core transformation space,   avcinc = 393030260
+ address segment size,           sizesg = 392878774
+ number of in-core blocks,       nincbk =        19
+ number of out-of-core blocks,   noutbk =         0
+ number of in-core segments,     incseg =         1
+ number of out-of-core segments, outseg =         0
+ trmain:     363949 transformed 1/r12    array elements were written in      67 records.
+
+
+ mosort: allocated sort2 space, avc2is=   393060488 available sort2 space, avcisx=   393060740
+
+   2 trial vectors read from nvfile (unit= 29).
+ ciiter=  14 noldhv=  4 noldv=  4
+
+ Eigenvalues of the hmc(*) matrix
+             total energy     electronic energy      residual norm          rtolci(*)
+    1*     -227.3899778104     -373.2766798269        0.0000004216        0.0000010000
+    2      -227.1770058161     -373.0637078326        0.0041521072        0.0100000000
+ 
+  tol(10)=  0.000000000000000E+000  eshsci=  2.052297813139843E-004
+ Total number of micro iterations:    7
+
+ ***  micro: final psci convergence values:  ***
+    imxov=  1 z0= 0.99999950 pnorm= 0.0000E+00 rznorm= 5.0166E-07 rpnorm= 0.0000E+00 noldr=  7 nnewr=  7 nolds=  0 nnews=  0
+ 
+
+ fdd(*) eigenvalues. symmetry block  1
+   -41.258857  -22.599556  -22.499658   -2.945897   -2.183834   -1.578012   -1.371840   -1.105893
+
+ qvv(*) eigenvalues. symmetry block  1
+     0.428347    0.686580    0.877695    1.200155    1.260247    1.513900    1.547903    1.785462    1.984370    2.291080
+     2.551784    2.838764    3.456961    3.658017    4.086332    4.148854    4.266187    4.567701    5.205238    5.718207
+     6.943752    7.483622
+
+ qvv(*) eigenvalues. symmetry block  2
+     1.297236    1.419393    2.192983    2.435901    2.698336    3.182374    3.661410    4.239399    6.463314
+
+ fdd(*) eigenvalues. symmetry block  3
+   -22.599642  -22.496205   -2.006533   -1.516678   -1.223998
+
+ qvv(*) eigenvalues. symmetry block  3
+     0.447478    0.742541    0.988454    1.090386    1.382492    1.546377    1.790413    1.946046    2.197250    2.378621
+     2.950060    3.200130    3.486269    3.932499    4.260337    4.421084    4.986219    5.222717    5.412553    6.314246
+     7.497169
+
+ qvv(*) eigenvalues. symmetry block  4
+     1.416438    1.555226    2.700850    2.718068    3.834596    4.321476    4.625410    6.561571
+
+ restrt: restart information saved on the restart file (unit= 13).
+
+ not all mcscf convergence criteria are satisfied.
+ iter=    5 emc=   -227.3899778104 demc= 8.1579E-06 wnorm= 1.6418E-03 knorm= 9.9669E-04 apxde= 3.7153E-07    *not conv.*     
+
+               starting mcscf iteration...   6
+
+ orbital-state coupling will not be calculated this iteration.
+
+ *** Starting integral transformation ***
+
+ module tranlib input parameters:
+
+ prnopt    =     1, chkopt    =     0,ortopt    =     0, denopt    =     0
+ mapin(1 ) =     1, nsymao    =     4, naopsy(1) =    31, freeze(1) =     1
+ mapout(1) =     1, nsymmo    =    -1, nmopsy(1) =    -1, fsplit    =     1
+ outlab    =     0, seward    =     0, lumorb    =     0, DALTON2   =     0
+ nextint   =     2
+ LDAMIN    =   127, LDAMAX    = 64959, LDAINC    =    64
+ LRC1MX    =    -1, LRC2MX    =    -1, LRCSCR    = 65000
+
+ THRESH    =  5.0000E-12  [cutoff threshold]
+
+ module tranlib: workspace lcore= 393198635
+
+ inoutp: segmentation information:
+ in-core transformation space,   avcinc = 393030260
+ address segment size,           sizesg = 392878774
+ number of in-core blocks,       nincbk =        19
+ number of out-of-core blocks,   noutbk =         0
+ number of in-core segments,     incseg =         1
+ number of out-of-core segments, outseg =         0
+ trmain:     363949 transformed 1/r12    array elements were written in      67 records.
+
+
+ mosort: allocated sort2 space, avc2is=   393060488 available sort2 space, avcisx=   393060740
+
+   2 trial vectors read from nvfile (unit= 29).
+ ciiter=  14 noldhv=  4 noldv=  4
+
+ Eigenvalues of the hmc(*) matrix
+             total energy     electronic energy      residual norm          rtolci(*)
+    1*     -227.3899782819     -373.2766802984        0.0000004232        0.0000010000
+    2      -227.1770994439     -373.0638014603        0.0041865230        0.0100000000
+ 
+  tol(10)=  0.000000000000000E+000  eshsci=  6.094102261789051E-005
+ Total number of micro iterations:    6
+
+ ***  micro: final psci convergence values:  ***
+    imxov=  1 z0= 0.99999997 pnorm= 0.0000E+00 rznorm= 6.5224E-07 rpnorm= 0.0000E+00 noldr=  6 nnewr=  6 nolds=  0 nnews=  0
+ 
+
+ fdd(*) eigenvalues. symmetry block  1
+   -41.259307  -22.599356  -22.499628   -2.945980   -2.183859   -1.577989   -1.371985   -1.105895
+
+ qvv(*) eigenvalues. symmetry block  1
+     0.428359    0.686575    0.877701    1.200187    1.260285    1.513917    1.547907    1.785477    1.984383    2.291104
+     2.551747    2.838786    3.456988    3.658011    4.086361    4.148856    4.266218    4.567646    5.205265    5.718220
+     6.943667    7.483537
+
+ qvv(*) eigenvalues. symmetry block  2
+     1.297230    1.419295    2.193031    2.435941    2.698305    3.182381    3.661387    4.239424    6.463210
+
+ fdd(*) eigenvalues. symmetry block  3
+   -22.599443  -22.496175   -2.006511   -1.516662   -1.223978
+
+ qvv(*) eigenvalues. symmetry block  3
+     0.447495    0.742577    0.988462    1.090415    1.382550    1.546403    1.790447    1.946143    2.197291    2.378619
+     2.950085    3.200109    3.486296    3.932507    4.260359    4.421122    4.986247    5.222747    5.412580    6.314287
+     7.497074
+
+ qvv(*) eigenvalues. symmetry block  4
+     1.416472    1.555130    2.700887    2.718048    3.834617    4.321497    4.625436    6.561469
+
+ restrt: restart information saved on the restart file (unit= 13).
+
+ not all mcscf convergence criteria are satisfied.
+ iter=    6 emc=   -227.3899782819 demc= 4.7151E-07 wnorm= 4.8753E-04 knorm= 2.4624E-04 apxde= 2.7439E-08    *not conv.*     
+
+               starting mcscf iteration...   7
+ !timer:                                 cpu_time=     0.533 walltime=     0.535
+
+ orbital-state coupling will be calculated this iteration.
+
+ *** Starting integral transformation ***
+
+ module tranlib input parameters:
+
+ prnopt    =     1, chkopt    =     0,ortopt    =     0, denopt    =     0
+ mapin(1 ) =     1, nsymao    =     4, naopsy(1) =    31, freeze(1) =     1
+ mapout(1) =     1, nsymmo    =    -1, nmopsy(1) =    -1, fsplit    =     1
+ outlab    =     0, seward    =     0, lumorb    =     0, DALTON2   =     0
+ nextint   =     2
+ LDAMIN    =   127, LDAMAX    = 64959, LDAINC    =    64
+ LRC1MX    =    -1, LRC2MX    =    -1, LRCSCR    = 65000
+
+ THRESH    =  5.0000E-12  [cutoff threshold]
+
+ module tranlib: workspace lcore= 393198635
+
+ inoutp: segmentation information:
+ in-core transformation space,   avcinc = 393030260
+ address segment size,           sizesg = 392878774
+ number of in-core blocks,       nincbk =        19
+ number of out-of-core blocks,   noutbk =         0
+ number of in-core segments,     incseg =         1
+ number of out-of-core segments, outseg =         0
+ trmain:     363949 transformed 1/r12    array elements were written in      67 records.
+
+
+ mosort: allocated sort2 space, avc2is=   393060488 available sort2 space, avcisx=   393060740
+
+   2 trial vectors read from nvfile (unit= 29).
+ ciiter=  14 noldhv=  4 noldv=  4
+
+ Eigenvalues of the hmc(*) matrix
+             total energy     electronic energy      residual norm          rtolci(*)
+    1*     -227.3899783169     -373.2766803334        0.0000004235        0.0000010000
+    2      -227.1771293139     -373.0638313304        0.0041921093        0.0100000000
+ 
+  tol(10)=  0.000000000000000E+000  eshsci=  1.774523299226155E-005
+ performing all-state projection
+ performing all-state projection
+ performing all-state projection
+ performing all-state projection
+ performing all-state projection
+ performing all-state projection
+ performing all-state projection
+ performing all-state projection
+ performing all-state projection
+ performing all-state projection
+ performing all-state projection
+ performing all-state projection
+ performing all-state projection
+ Total number of micro iterations:    7
+
+ ***  micro: final psci convergence values:  ***
+    imxov=  1 z0= 1.00000000 pnorm= 2.1363E-04 rznorm= 7.1816E-07 rpnorm= 8.4025E-07 noldr=  6 nnewr=  6 nolds=  6 nnews=  6
+ 
+
+ fdd(*) eigenvalues. symmetry block  1
+   -41.259448  -22.599301  -22.499617   -2.946007   -2.183865   -1.577982   -1.372026   -1.105897
+
+ qvv(*) eigenvalues. symmetry block  1
+     0.428363    0.686573    0.877703    1.200197    1.260296    1.513922    1.547906    1.785481    1.984387    2.291111
+     2.551734    2.838793    3.456996    3.658008    4.086369    4.148856    4.266227    4.567627    5.205272    5.718223
+     6.943638    7.483508
+
+ qvv(*) eigenvalues. symmetry block  2
+     1.297233    1.419281    2.193044    2.435950    2.698292    3.182383    3.661383    4.239431    6.463176
+
+ fdd(*) eigenvalues. symmetry block  3
+   -22.599387  -22.496163   -2.006506   -1.516658   -1.223973
+
+ qvv(*) eigenvalues. symmetry block  3
+     0.447500    0.742586    0.988464    1.090422    1.382566    1.546410    1.790457    1.946170    2.197303    2.378618
+     2.950092    3.200101    3.486304    3.932509    4.260366    4.421133    4.986256    5.222756    5.412588    6.314299
+     7.497042
+
+ qvv(*) eigenvalues. symmetry block  4
+     1.416481    1.555127    2.700899    2.718046    3.834624    4.321503    4.625444    6.561435
+
+ restrt: restart information saved on the restart file (unit= 13).
+
+ not all mcscf convergence criteria are satisfied.
+ iter=    7 emc=   -227.3899783169 demc= 3.5001E-08 wnorm= 1.4196E-04 knorm= 9.0144E-05 apxde= 2.9345E-09    *not conv.*     
+
+               starting mcscf iteration...   8
+ !timer:                                 cpu_time=     0.610 walltime=     0.612
+
+ orbital-state coupling will be calculated this iteration.
+
+ *** Starting integral transformation ***
+
+ module tranlib input parameters:
+
+ prnopt    =     1, chkopt    =     0,ortopt    =     0, denopt    =     0
+ mapin(1 ) =     1, nsymao    =     4, naopsy(1) =    31, freeze(1) =     1
+ mapout(1) =     1, nsymmo    =    -1, nmopsy(1) =    -1, fsplit    =     1
+ outlab    =     0, seward    =     0, lumorb    =     0, DALTON2   =     0
+ nextint   =     2
+ LDAMIN    =   127, LDAMAX    = 64959, LDAINC    =    64
+ LRC1MX    =    -1, LRC2MX    =    -1, LRCSCR    = 65000
+
+ THRESH    =  5.0000E-12  [cutoff threshold]
+
+ module tranlib: workspace lcore= 393198635
+
+ inoutp: segmentation information:
+ in-core transformation space,   avcinc = 393030260
+ address segment size,           sizesg = 392878774
+ number of in-core blocks,       nincbk =        19
+ number of out-of-core blocks,   noutbk =         0
+ number of in-core segments,     incseg =         1
+ number of out-of-core segments, outseg =         0
+ trmain:     363949 transformed 1/r12    array elements were written in      67 records.
+
+
+ mosort: allocated sort2 space, avc2is=   393060488 available sort2 space, avcisx=   393060740
+
+   3 trial vectors read from nvfile (unit= 29).
+ ciiter=  13 noldhv=  3 noldv=  3
+
+ Eigenvalues of the hmc(*) matrix
+             total energy     electronic energy      residual norm          rtolci(*)
+    1*     -227.3899783199     -373.2766803363        0.0000004683        0.0000010000
+    2      -227.1770833524     -373.0637853689        0.0090405763        0.0100000000
+ 
+  tol(10)=  0.000000000000000E+000  eshsci=  1.090134301027276E-007
+ performing all-state projection
+ performing all-state projection
+ Total number of micro iterations:    2
+
+ ***  micro: final psci convergence values:  ***
+    imxov=  1 z0= 1.00000000 pnorm= 0.0000E+00 rznorm= 2.7011E-07 rpnorm= 2.2532E-07 noldr=  2 nnewr=  2 nolds=  0 nnews=  0
+ 
+
+ fdd(*) eigenvalues. symmetry block  1
+   -41.259510  -22.599280  -22.499609   -2.946020   -2.183866   -1.577979   -1.372042   -1.105898
+
+ qvv(*) eigenvalues. symmetry block  1
+     0.428364    0.686571    0.877705    1.200200    1.260301    1.513924    1.547905    1.785483    1.984388    2.291114
+     2.551728    2.838796    3.457000    3.658007    4.086373    4.148856    4.266231    4.567619    5.205274    5.718224
+     6.943625    7.483495
+
+ qvv(*) eigenvalues. symmetry block  2
+     1.297234    1.419277    2.193049    2.435953    2.698286    3.182383    3.661382    4.239433    6.463161
+
+ fdd(*) eigenvalues. symmetry block  3
+   -22.599367  -22.496156   -2.006504   -1.516657   -1.223971
+
+ qvv(*) eigenvalues. symmetry block  3
+     0.447501    0.742590    0.988464    1.090425    1.382572    1.546413    1.790461    1.946181    2.197308    2.378617
+     2.950094    3.200097    3.486307    3.932509    4.260369    4.421137    4.986261    5.222759    5.412591    6.314303
+     7.497028
+
+ qvv(*) eigenvalues. symmetry block  4
+     1.416485    1.555129    2.700903    2.718046    3.834627    4.321507    4.625447    6.561420
+
+ restrt: restart information saved on the restart file (unit= 13).
+
+ all mcscf convergence criteria are satisfied.
+
+ final mcscf convergence values:
+ iter=    8 emc=   -227.3899783199 demc= 2.9237E-09 wnorm= 8.7211E-07 knorm= 7.9035E-07 apxde= 1.4264E-13    *converged*     
+
+
+
+
+   ---------Individual total energies for all states:----------
+   DRT #1 state # 1 wt 1.000 total energy=     -227.389978320, rel. (eV)=   0.000000
+   ------------------------------------------------------------
+
+
+ MO-coefficient print-out skipped (no flag 32)
+ They may be found in the MOCOEF directory.
+
+          natural orbitals of the final iteration,block  1    -  A1 
+               MO    1        MO    2        MO    3        MO    4        MO    5        MO    6        MO    7        MO    8
+  occ(*)=     2.00000000     2.00000000     2.00000000     2.00000000     2.00000000     2.00000000     2.00000000     2.00000000
+               MO    9        MO   10        MO   11        MO   12        MO   13        MO   14        MO   15        MO   16
+  occ(*)=     1.61797055     0.00000000     0.00000000     0.00000000     0.00000000     0.00000000     0.00000000     0.00000000
+               MO   17        MO   18        MO   19        MO   20        MO   21        MO   22        MO   23        MO   24
+  occ(*)=     0.00000000     0.00000000     0.00000000     0.00000000     0.00000000     0.00000000     0.00000000     0.00000000
+               MO   25        MO   26        MO   27        MO   28        MO   29        MO   30        MO   31
+  occ(*)=     0.00000000     0.00000000     0.00000000     0.00000000     0.00000000     0.00000000     0.00000000
+
+          natural orbitals of the final iteration,block  2    -  B1 
+               MO    1        MO    2        MO    3        MO    4        MO    5        MO    6        MO    7        MO    8
+  occ(*)=     1.99319968     1.93460851     0.11196702     0.00000000     0.00000000     0.00000000     0.00000000     0.00000000
+               MO    9        MO   10        MO   11        MO   12
+  occ(*)=     0.00000000     0.00000000     0.00000000     0.00000000
+
+          natural orbitals of the final iteration,block  3    -  B2 
+               MO    1        MO    2        MO    3        MO    4        MO    5        MO    6        MO    7        MO    8
+  occ(*)=     2.00000000     2.00000000     2.00000000     2.00000000     2.00000000     0.38279997     0.00000000     0.00000000
+               MO    9        MO   10        MO   11        MO   12        MO   13        MO   14        MO   15        MO   16
+  occ(*)=     0.00000000     0.00000000     0.00000000     0.00000000     0.00000000     0.00000000     0.00000000     0.00000000
+               MO   17        MO   18        MO   19        MO   20        MO   21        MO   22        MO   23        MO   24
+  occ(*)=     0.00000000     0.00000000     0.00000000     0.00000000     0.00000000     0.00000000     0.00000000     0.00000000
+               MO   25        MO   26        MO   27
+  occ(*)=     0.00000000     0.00000000     0.00000000
+
+          natural orbitals of the final iteration,block  4    -  A2 
+               MO    1        MO    2        MO    3        MO    4        MO    5        MO    6        MO    7        MO    8
+  occ(*)=     1.89174100     0.06771327     0.00000000     0.00000000     0.00000000     0.00000000     0.00000000     0.00000000
+               MO    9        MO   10
+  occ(*)=     0.00000000     0.00000000
+ d1(*), fmc(*), and qmc(*) written to the 1-particle density matrix file.
+        579 d2(*) elements written to the 2-particle density matrix file: mcd2fl                                                      
+
+
+          Mulliken population analysis
+
+
+  NOTE: For HERMIT use spherical harmonics basis sets !!!
+ 
+
+                        A1  partial gross atomic populations
+   ao class       1A1        2A1        3A1        4A1        5A1        6A1 
+    O1_ s       1.999348  -0.000364  -0.000008   1.376023   0.205924   0.043052
+    O1_ p       0.000002  -0.000384  -0.000029   0.061909   0.041133   0.009586
+    O1_ d      -0.000000  -0.000009  -0.000000   0.001250   0.000672   0.000468
+    C1_ s       0.000423   2.000284   0.001296   0.263837   0.151113   0.581201
+    C1_ p       0.000378   0.000191   0.001337   0.143034   0.215542   0.280874
+    C1_ d      -0.000064   0.000005   0.000028   0.029202   0.029723   0.000851
+    C2_ s      -0.000038   0.000276   1.997000   0.073236   1.040421   0.065421
+    C2_ p      -0.000065  -0.000163   0.000266   0.043231   0.305135   0.503584
+    C2_ d      -0.000000  -0.000071   0.000063   0.002203   0.010837   0.008420
+    H1_ s       0.000015   0.000341   0.000046   0.003890  -0.001061   0.488153
+    H1_ p      -0.000000  -0.000106   0.000000   0.002185   0.000560   0.018391
+ 
+   ao class       7A1        8A1        9A1       10A1       11A1       12A1 
+    O1_ s       0.063979   0.060724   0.001446   0.000000   0.000000   0.000000
+    O1_ p       0.892362   0.615873   0.021524   0.000000   0.000000   0.000000
+    O1_ d       0.002301   0.000955  -0.000013   0.000000   0.000000   0.000000
+    C1_ s       0.000857   0.005376   0.005559   0.000000   0.000000   0.000000
+    C1_ p       0.383043   0.466271   0.015614   0.000000   0.000000   0.000000
+    C1_ d       0.015396   0.034062   0.021912   0.000000   0.000000   0.000000
+    C2_ s       0.121041   0.010214   0.360168   0.000000   0.000000   0.000000
+    C2_ p       0.300347   0.629509   1.181573   0.000000   0.000000   0.000000
+    C2_ d       0.015181   0.002294   0.006494   0.000000   0.000000   0.000000
+    H1_ s       0.202067   0.171174   0.003700   0.000000   0.000000   0.000000
+    H1_ p       0.003425   0.003549  -0.000006   0.000000   0.000000   0.000000
+ 
+   ao class      13A1       14A1       15A1       16A1       17A1       18A1 
+ 
+   ao class      19A1       20A1       21A1       22A1       23A1       24A1 
+ 
+   ao class      25A1       26A1       27A1       28A1       29A1       30A1 
+ 
+   ao class      31A1 
+
+                        B1  partial gross atomic populations
+   ao class       1B1        2B1        3B1        4B1        5B1        6B1 
+    O1_ p       1.596658   0.086392   0.012894   0.000000   0.000000   0.000000
+    O1_ d       0.002635   0.000030   0.000001   0.000000   0.000000   0.000000
+    C1_ p       0.362128   0.270408   0.074217   0.000000   0.000000   0.000000
+    C1_ d       0.036625   0.027905   0.000520   0.000000   0.000000   0.000000
+    C2_ p      -0.009960   1.531500   0.021710   0.000000   0.000000   0.000000
+    C2_ d       0.003258   0.016635   0.002107   0.000000   0.000000   0.000000
+    H1_ p       0.001856   0.001739   0.000519   0.000000   0.000000   0.000000
+ 
+   ao class       7B1        8B1        9B1       10B1       11B1       12B1 
+
+                        B2  partial gross atomic populations
+   ao class       1B2        2B2        3B2        4B2        5B2        6B2 
+    O1_ p      -0.000370  -0.000003   0.397777   0.530165   0.270724   0.002925
+    O1_ d      -0.000009  -0.000000   0.005175   0.001615   0.003810   0.000028
+    C1_ s       1.998899   0.001078   1.082744  -0.000734   0.024865   0.006607
+    C1_ p       0.000183   0.000548  -0.035151   0.763913   0.875475   0.009992
+    C1_ d       0.000001  -0.000008   0.007878   0.018389   0.030300   0.001855
+    C2_ s       0.000770   1.997169   0.163545   0.417184   0.044282   0.105903
+    C2_ p       0.000713   0.001291   0.134603   0.227990   0.022993   0.247435
+    C2_ d      -0.000017  -0.000107   0.013715   0.011173   0.007197   0.008042
+    H1_ s      -0.000085   0.000030   0.216876   0.026585   0.710582  -0.000035
+    H1_ p      -0.000085   0.000000   0.012838   0.003720   0.009773   0.000047
+ 
+   ao class       7B2        8B2        9B2       10B2       11B2       12B2 
+ 
+   ao class      13B2       14B2       15B2       16B2       17B2       18B2 
+ 
+   ao class      19B2       20B2       21B2       22B2       23B2       24B2 
+ 
+   ao class      25B2       26B2       27B2 
+
+                        A2  partial gross atomic populations
+   ao class       1A2        2A2        3A2        4A2        5A2        6A2 
+    O1_ d       0.004440   0.000140   0.000000   0.000000   0.000000   0.000000
+    C1_ p       1.392337   0.016135   0.000000   0.000000   0.000000   0.000000
+    C1_ d       0.003349   0.000779   0.000000   0.000000   0.000000   0.000000
+    C2_ p       0.452419   0.049570   0.000000   0.000000   0.000000   0.000000
+    C2_ d       0.028818   0.001018   0.000000   0.000000   0.000000   0.000000
+    H1_ p       0.010378   0.000072   0.000000   0.000000   0.000000   0.000000
+ 
+   ao class       7A2        8A2        9A2       10A2 
+
+
+                        gross atomic populations
+     ao           O1_        C1_        C2_        H1_
+      s         3.750124   6.123407   6.396593   1.822279
+      p         4.539139   5.236469   5.643680   0.068853
+      d         0.023489   0.258708   0.137260   0.000000
+    total       8.312752  11.618583  12.177533   1.891132
+ 
+
+ Trace:   34.00000000
+
+ Note:
+ For the regular analysis, the Trace means the total number of electrons.  
+ If the spin-density matrix was considered, the  Trace means the 2*S.  
+  
+ !timer: mcscf                           cpu_time=     0.691 walltime=     0.709

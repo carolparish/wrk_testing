@@ -1,0 +1,475 @@
+
+&& iteration number 1 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+ 
+ program "mcdrt 4.1 a3"
+
+ distinct row table specification and csf
+ selection for mcscf wavefunction optimization.
+
+ programmed by: ron shepard
+
+ version date: 17-oct-91
+
+
+ This Version of Program mcdrt is Maintained by:
+     Thomas Mueller
+     Juelich Supercomputing Centre (JSC)
+     Institute of Advanced Simulation (IAS)
+     D-52425 Juelich, Germany 
+     Email: th.mueller@fz-juelich.de
+
+
+
+     ******************************************
+     **    PROGRAM:              MCDRT       **
+     **    PROGRAM VERSION:      5.5         **
+     **    DISTRIBUTION VERSION: 5.9.a       **
+     ******************************************
+
+ expanded keystroke file:
+ /home/ab9tm/columbus_training/DZ/singlet/gopt/MCSCF/WORK/mcdrtky                
+ 
+ input the spin multiplicity [  0]: spin multiplicity:    1    singlet 
+ input the total number of electrons [  0]: nelt:     34
+ input the number of irreps (1-8) [  0]: nsym:      4
+ enter symmetry labels:(y,[n]) enter 4 labels (a4):
+ enter symmetry label, default=   1
+ enter symmetry label, default=   2
+ enter symmetry label, default=   3
+ enter symmetry label, default=   4
+ input the molecular spatial symmetry (irrep 1:nsym) [  0]: spatial symmetry is irrep number:      1
+ 
+ input the list of doubly-occupied orbitals (sym(i),rmo(i),i=1,ndot):
+ number of doubly-occupied orbitals:     13
+ number of inactive electrons:     26
+ number of active electrons:      8
+ level(*)        1   2   3   4   5   6   7   8   9  10  11  12  13
+ symd(*)         1   1   1   1   1   1   1   1   3   3   3   3   3
+ slabel(*)     a1  a1  a1  a1  a1  a1  a1  a1  b2  b2  b2  b2  b2 
+ doub(*)         1   2   3   4   5   6   7   8   1   2   3   4   5
+ 
+ input the active orbitals (sym(i),rmo(i),i=1,nact):
+ nact:      7
+ level(*)        1   2   3   4   5   6   7
+ syml(*)         1   2   2   2   3   4   4
+ slabel(*)     a1  b1  b1  b1  b2  a2  a2 
+ modrt(*)        9   1   2   3   6   1   2
+ input the minimum cumulative occupation for each active level:
+  a1  b1  b1  b1  b2  a2  a2 
+    9   1   2   3   6   1   2
+ input the maximum cumulative occupation for each active level:
+  a1  b1  b1  b1  b2  a2  a2 
+    9   1   2   3   6   1   2
+ slabel(*)     a1  b1  b1  b1  b2  a2  a2 
+ modrt(*)        9   1   2   3   6   1   2
+ occmin(*)       0   0   0   0   0   0   8
+ occmax(*)       8   8   8   8   8   8   8
+ input the minimum b value for each active level:
+  a1  b1  b1  b1  b2  a2  a2 
+    9   1   2   3   6   1   2
+ input the maximum b value for each active level:
+  a1  b1  b1  b1  b2  a2  a2 
+    9   1   2   3   6   1   2
+ slabel(*)     a1  b1  b1  b1  b2  a2  a2 
+ modrt(*)        9   1   2   3   6   1   2
+ bmin(*)         0   0   0   0   0   0   0
+ bmax(*)         8   8   8   8   8   8   8
+ input the step masks for each active level:
+ modrt:smask=
+   9:1111   1:1111   2:1111   3:1111   6:1111   1:1111   2:1111
+ input the number of vertices to be deleted [  0]: number of vertices to be removed (a priori):      0
+ number of rows in the drt:     40
+ are any arcs to be manually removed?(y,[n])
+ nwalk=     139
+ input the range of drt levels to print (l1,l2):
+ levprt(*)       0   7
+
+ level  0 through level  7 of the drt:
+
+ row lev a b syml lab rmo  l0  l1  l2  l3 isym xbar   y0    y1    y2    xp     z
+
+  40   7 4 0   4 a2    2    0   0   0   0   1     1     0     0     0   139     0
+                                            2     0     0     0     0   115     0
+                                            3     0     0     0     0   121     0
+                                            4     0     0     0     0   115     0
+ ........................................
+
+  37   6 4 0   4 a2    1   40   0   0   0   1     1     0     0     0    33     0
+                                            2     0     0     0     0    24     0
+                                            3     0     0     0     0    24     0
+                                            4     0     0     0     0    24     0
+
+  38   6 3 1   4 a2    1    0   0  40   0   1     0     0     0     0    51     0
+                                            2     0     0     0     0    57     0
+                                            3     0     0     0     0    51     0
+                                            4     1     1     1     0    51    33
+
+  39   6 3 0   4 a2    1    0   0   0  40   1     1     1     1     1    55    84
+                                            2     0     0     0     0    40     0
+                                            3     0     0     0     0    40     0
+                                            4     0     0     0     0    40     0
+ ........................................
+
+  31   5 4 0   3 b2    6   37   0   0   0   1     1     0     0     0     8     0
+                                            2     0     0     0     0     3     0
+                                            3     0     0     0     0     1     0
+                                            4     0     0     0     0     3     0
+
+  32   5 3 1   3 b2    6   38   0  37   0   1     0     0     0     0    10     0
+                                            2     0     0     0     0    14     0
+                                            3     0     0     0     0    10     0
+                                            4     2     1     1     0     6     8
+
+  33   5 3 0   3 b2    6   39  38   0  37   1     3     2     1     1    19    14
+                                            2     0     0     0     0    11     0
+                                            3     0     0     0     0     9     0
+                                            4     0     0     0     0    11     0
+
+  34   5 2 2   3 b2    6    0   0  38   0   1     1     1     1     0     9    58
+                                            2     0     0     0     0    12     0
+                                            3     0     0     0     0    12     0
+                                            4     0     0     0     0    12     0
+
+  35   5 2 1   3 b2    6    0   0  39  38   1     0     0     0     0    18     0
+                                            2     0     0     0     0    22     0
+                                            3     0     0     0     0    18     0
+                                            4     2     2     2     1    17    67
+
+  36   5 2 0   3 b2    6    0   0   0  39   1     1     1     1     1    19   120
+                                            2     0     0     0     0    11     0
+                                            3     0     0     0     0     9     0
+                                            4     0     0     0     0    11     0
+ ........................................
+
+  21   4 4 0   2 b1    3   31   0   0   0   1     1     0     0     0     1     0
+                                            2     0     0     0     0     0     0
+                                            3     0     0     0     0     0     0
+                                            4     0     0     0     0     0     0
+
+  22   4 3 1   2 b1    3   32   0  31   0   1     0     0     0     0     1     0
+                                            2     0     0     0     0     3     0
+                                            3     1     1     1     0     0     1
+                                            4     2     0     0     0     0     8
+
+  23   4 3 0   2 b1    3   33  32   0  31   1     4     1     1     1     7     1
+                                            2     2     2     0     0     3     8
+                                            3     0     0     0     0     0     0
+                                            4     0     0     0     0     0     0
+
+  24   4 2 2   2 b1    3   34   0  32   0   1     1     0     0     0     3    58
+                                            2     2     2     2     0     3    11
+                                            3     0     0     0     0     0     0
+                                            4     0     0     0     0     0     0
+
+  25   4 2 1   2 b1    3   35  34  33  32   1     0     0     0     0     9     0
+                                            2     0     0     0     0    11     0
+                                            3     4     4     3     0     0    21
+                                            4     4     2     2     2     0    14
+
+  26   4 2 0   2 b1    3   36  35   0  33   1     4     3     3     3    12    21
+                                            2     2     2     0     0     8    67
+                                            3     0     0     0     0     0     0
+                                            4     0     0     0     0     0     0
+
+  27   4 1 3   2 b1    3    0   0  34   0   1     0     0     0     0     3     0
+                                            2     0     0     0     0     1     0
+                                            3     1     1     1     0     0    61
+                                            4     0     0     0     0     0     0
+
+  28   4 1 2   2 b1    3    0   0  35  34   1     1     1     1     1     6    61
+                                            2     2     2     2     0     9    75
+                                            3     0     0     0     0     0     0
+                                            4     0     0     0     0     0     0
+
+  29   4 1 1   2 b1    3    0   0  36  35   1     0     0     0     0     9     0
+                                            2     0     0     0     0    11     0
+                                            3     1     1     1     0     0   132
+                                            4     2     2     2     2     0    84
+
+  30   4 1 0   2 b1    3    0   0   0  36   1     1     1     1     1     7   132
+                                            2     0     0     0     0     3     0
+                                            3     0     0     0     0     0     0
+                                            4     0     0     0     0     0     0
+ ........................................
+
+  11   3 3 0   2 b1    2   23  22   0  21   1     5     1     1     1     1     0
+                                            2     2     0     0     0     0     8
+                                            3     2     2     0     0     0     8
+                                            4     1     1     0     0     0     1
+
+  12   3 2 1   2 b1    2   25  24  23  22   1     4     4     2     0     1     8
+                                            2     5     5     4     0     2     2
+                                            3     5     1     1     1     0     1
+                                            4     6     2     2     2     0     8
+
+  13   3 2 0   2 b1    2   26  25   0  23   1     8     4     4     4     4     4
+                                            2     4     2     2     2     2     9
+                                            3     4     4     0     0     0    14
+                                            4     4     4     0     0     0    21
+
+  14   3 1 2   2 b1    2   28  27  25  24   1     2     1     1     1     1    60
+                                            2     4     2     2     2     2    12
+                                            3     4     4     4     0     0    14
+                                            4     5     5     4     0     0    21
+
+  15   3 1 1   2 b1    2   29  28  26  25   1     4     4     2     0     4    69
+                                            2     5     5     4     0     4    25
+                                            3     5     4     4     4     0    21
+                                            4     6     4     4     4     0    14
+
+  16   3 1 0   2 b1    2   30  29   0  26   1     5     4     4     4     4    29
+                                            2     2     2     2     2     2    73
+                                            3     2     2     0     0     0    84
+                                            4     1     1     0     0     0   132
+
+  17   3 0 3   2 b1    2    0   0  28  27   1     2     2     2     0     1    81
+                                            2     1     1     1     0     0    66
+                                            3     1     1     1     1     0    61
+                                            4     0     0     0     0     0     0
+
+  18   3 0 2   2 b1    2    0   0  29  28   1     1     1     1     1     1    66
+                                            2     2     2     2     2     2    82
+                                            3     2     2     2     0     0    84
+                                            4     1     1     1     0     0   132
+
+  19   3 0 1   2 b1    2    0   0  30  29   1     0     0     0     0     1     0
+                                            2     1     1     1     0     2   136
+                                            3     1     1     1     1     0   132
+                                            4     2     2     2     2     0    84
+
+  20   3 0 0   2 b1    2    0   0   0  30   1     1     1     1     1     1   138
+                                            2     0     0     0     0     0     0
+                                            3     0     0     0     0     0     0
+                                            4     0     0     0     0     0     0
+ ........................................
+
+   5   2 2 0   2 b1    1   13  12   0  11   1    18    10     5     5     1     0
+                                            2    10     6     2     2     0     8
+                                            3    12     8     2     2     0     8
+                                            4    10     6     1     1     0     1
+
+   6   2 1 1   2 b1    1   15  14  13  12   1    16    12     8     4     1     8
+                                            2    20    15    13     5     1     3
+                                            3    19    14     9     5     0     1
+                                            4    20    14    10     6     0     8
+
+   7   2 1 0   2 b1    1   16  15   0  13   1    18    13     8     8     2     6
+                                            2    10     8     4     4     1    10
+                                            3    12    10     4     4     0    14
+                                            4    10     9     4     4     0    21
+
+   8   2 0 2   2 b1    1   18  17  15  14   1     9     8     7     2     0    61
+                                            2    12    10     8     4     1    13
+                                            3    12    10    10     4     0    14
+                                            4    12    11    10     5     0    21
+
+   9   2 0 1   2 b1    1   19  18  16  15   1     8     8     6     4     1    72
+                                            2    12    11    10     5     1    28
+                                            3     8     7     6     5     0    21
+                                            4    12    10     8     6     0    14
+
+  10   2 0 0   2 b1    1   20  19   0  16   1     7     6     5     5     1    32
+                                            2     2     2     2     2     0    75
+                                            3     4     4     2     2     0    84
+                                            4     2     2     1     1     0   132
+ ........................................
+
+   2   1 1 0   1 a1    9    7   6   0   5   1    56    38    18    18     1     0
+                                            2    36    26    10    10     0     8
+                                            3    44    32    12    12     0     8
+                                            4    39    29    10    10     0     1
+
+   3   1 0 1   1 a1    9    9   8   7   6   1    46    38    26    16     1     8
+                                            2    59    47    38    20     0     4
+                                            3    49    41    29    19     0     1
+                                            4    56    44    32    20     0     8
+
+   4   1 0 0   1 a1    9   10   9   0   7   1    37    30    18    18     1     7
+                                            2    20    18    10    10     0    11
+                                            3    28    24    12    12     0    14
+                                            4    20    18    10    10     0    21
+ ........................................
+
+   1   0 0 0   0       0    4   3   0   2   1   139   102    56    56     1     0
+                                            2   115    95    36    36     0     8
+                                            3   121    93    44    44     0     8
+                                            4   115    95    39    39     0     1
+ ........................................
+
+ initial csf selection step:
+ total number of walks in the drt, nwalk=     139
+ keep all of these walks?(y,[n]) individual walks will be generated from the drt.
+ apply orbital-group occupation restrictions?(y,[n]) apply reference occupation restrictions?(y,[n]) manually select individual walks?(y,[n])
+ step-vector based csf selection complete.
+      139 csfs selected from     139 total walks.
+
+ beginning step-vector based csf selection.
+ enter [step_vector/disposition] pairs:
+
+ enter the active orbital step vector, (-1/ to end):
+
+ step-vector based csf selection complete.
+      139 csfs selected from     139 total walks.
+
+ beginning numerical walk selection:
+ enter positive walk numbers to add walks,
+ negative walk numbers to delete walks, and zero to end.
+
+ input walk number (0 to end) [  0]:
+ final csf selection complete.
+      139 csfs selected from     139 total walks.
+  drt construction and csf selection complete.
+ 
+ input a title card, default=mdrt2_title
+  title                                                                         
+  
+ input a drt file name, default=mcdrtfl
+ drt and indexing arrays written to file:
+ /home/ab9tm/columbus_training/DZ/singlet/gopt/MCSCF/WORK/mcdrtfl                
+ 
+ write the drt file?([y],n) include step(*) vectors?([y],n) drt file is being written...
+
+
+   List of selected configurations (step vectors)
+
+
+   CSF#     1    3 3 3 3 0 0 0
+   CSF#     2    3 3 3 0 3 0 0
+   CSF#     3    3 3 3 0 0 3 0
+   CSF#     4    3 3 3 0 0 1 2
+   CSF#     5    3 3 3 0 0 0 3
+   CSF#     6    3 3 1 2 3 0 0
+   CSF#     7    3 3 1 2 0 3 0
+   CSF#     8    3 3 1 2 0 1 2
+   CSF#     9    3 3 1 2 0 0 3
+   CSF#    10    3 3 1 1 0 2 2
+   CSF#    11    3 3 0 3 3 0 0
+   CSF#    12    3 3 0 3 0 3 0
+   CSF#    13    3 3 0 3 0 1 2
+   CSF#    14    3 3 0 3 0 0 3
+   CSF#    15    3 3 0 0 3 3 0
+   CSF#    16    3 3 0 0 3 1 2
+   CSF#    17    3 3 0 0 3 0 3
+   CSF#    18    3 3 0 0 0 3 3
+   CSF#    19    3 1 3 2 3 0 0
+   CSF#    20    3 1 3 2 0 3 0
+   CSF#    21    3 1 3 2 0 1 2
+   CSF#    22    3 1 3 2 0 0 3
+   CSF#    23    3 1 3 1 0 2 2
+   CSF#    24    3 1 2 3 3 0 0
+   CSF#    25    3 1 2 3 0 3 0
+   CSF#    26    3 1 2 3 0 1 2
+   CSF#    27    3 1 2 3 0 0 3
+   CSF#    28    3 1 2 0 3 3 0
+   CSF#    29    3 1 2 0 3 1 2
+   CSF#    30    3 1 2 0 3 0 3
+   CSF#    31    3 1 2 0 0 3 3
+   CSF#    32    3 1 1 3 0 2 2
+   CSF#    33    3 1 1 0 3 2 2
+   CSF#    34    3 1 0 2 3 3 0
+   CSF#    35    3 1 0 2 3 1 2
+   CSF#    36    3 1 0 2 3 0 3
+   CSF#    37    3 1 0 2 0 3 3
+   CSF#    38    3 1 0 1 3 2 2
+   CSF#    39    3 0 3 3 3 0 0
+   CSF#    40    3 0 3 3 0 3 0
+   CSF#    41    3 0 3 3 0 1 2
+   CSF#    42    3 0 3 3 0 0 3
+   CSF#    43    3 0 3 0 3 3 0
+   CSF#    44    3 0 3 0 3 1 2
+   CSF#    45    3 0 3 0 3 0 3
+   CSF#    46    3 0 3 0 0 3 3
+   CSF#    47    3 0 1 2 3 3 0
+   CSF#    48    3 0 1 2 3 1 2
+   CSF#    49    3 0 1 2 3 0 3
+   CSF#    50    3 0 1 2 0 3 3
+   CSF#    51    3 0 1 1 3 2 2
+   CSF#    52    3 0 0 3 3 3 0
+   CSF#    53    3 0 0 3 3 1 2
+   CSF#    54    3 0 0 3 3 0 3
+   CSF#    55    3 0 0 3 0 3 3
+   CSF#    56    3 0 0 0 3 3 3
+   CSF#    57    1 3 3 2 1 2 0
+   CSF#    58    1 3 3 2 1 0 2
+   CSF#    59    1 3 3 1 2 2 0
+   CSF#    60    1 3 3 1 2 0 2
+   CSF#    61    1 3 2 3 1 2 0
+   CSF#    62    1 3 2 3 1 0 2
+   CSF#    63    1 3 2 0 1 3 2
+   CSF#    64    1 3 2 0 1 2 3
+   CSF#    65    1 3 1 3 2 2 0
+   CSF#    66    1 3 1 3 2 0 2
+   CSF#    67    1 3 1 0 2 3 2
+   CSF#    68    1 3 1 0 2 2 3
+   CSF#    69    1 3 0 2 1 3 2
+   CSF#    70    1 3 0 2 1 2 3
+   CSF#    71    1 3 0 1 2 3 2
+   CSF#    72    1 3 0 1 2 2 3
+   CSF#    73    1 2 3 3 1 2 0
+   CSF#    74    1 2 3 3 1 0 2
+   CSF#    75    1 2 3 0 1 3 2
+   CSF#    76    1 2 3 0 1 2 3
+   CSF#    77    1 2 1 2 1 3 2
+   CSF#    78    1 2 1 2 1 2 3
+   CSF#    79    1 2 1 1 2 3 2
+   CSF#    80    1 2 1 1 2 2 3
+   CSF#    81    1 2 0 3 1 3 2
+   CSF#    82    1 2 0 3 1 2 3
+   CSF#    83    1 1 3 3 2 2 0
+   CSF#    84    1 1 3 3 2 0 2
+   CSF#    85    1 1 3 0 2 3 2
+   CSF#    86    1 1 3 0 2 2 3
+   CSF#    87    1 1 2 2 1 3 2
+   CSF#    88    1 1 2 2 1 2 3
+   CSF#    89    1 1 2 1 2 3 2
+   CSF#    90    1 1 2 1 2 2 3
+   CSF#    91    1 1 1 2 2 3 2
+   CSF#    92    1 1 1 2 2 2 3
+   CSF#    93    1 1 0 3 2 3 2
+   CSF#    94    1 1 0 3 2 2 3
+   CSF#    95    1 0 3 2 1 3 2
+   CSF#    96    1 0 3 2 1 2 3
+   CSF#    97    1 0 3 1 2 3 2
+   CSF#    98    1 0 3 1 2 2 3
+   CSF#    99    1 0 2 3 1 3 2
+   CSF#   100    1 0 2 3 1 2 3
+   CSF#   101    1 0 1 3 2 3 2
+   CSF#   102    1 0 1 3 2 2 3
+   CSF#   103    0 3 3 3 3 0 0
+   CSF#   104    0 3 3 3 0 3 0
+   CSF#   105    0 3 3 3 0 1 2
+   CSF#   106    0 3 3 3 0 0 3
+   CSF#   107    0 3 3 0 3 3 0
+   CSF#   108    0 3 3 0 3 1 2
+   CSF#   109    0 3 3 0 3 0 3
+   CSF#   110    0 3 3 0 0 3 3
+   CSF#   111    0 3 1 2 3 3 0
+   CSF#   112    0 3 1 2 3 1 2
+   CSF#   113    0 3 1 2 3 0 3
+   CSF#   114    0 3 1 2 0 3 3
+   CSF#   115    0 3 1 1 3 2 2
+   CSF#   116    0 3 0 3 3 3 0
+   CSF#   117    0 3 0 3 3 1 2
+   CSF#   118    0 3 0 3 3 0 3
+   CSF#   119    0 3 0 3 0 3 3
+   CSF#   120    0 3 0 0 3 3 3
+   CSF#   121    0 1 3 2 3 3 0
+   CSF#   122    0 1 3 2 3 1 2
+   CSF#   123    0 1 3 2 3 0 3
+   CSF#   124    0 1 3 2 0 3 3
+   CSF#   125    0 1 3 1 3 2 2
+   CSF#   126    0 1 2 3 3 3 0
+   CSF#   127    0 1 2 3 3 1 2
+   CSF#   128    0 1 2 3 3 0 3
+   CSF#   129    0 1 2 3 0 3 3
+   CSF#   130    0 1 2 0 3 3 3
+   CSF#   131    0 1 1 3 3 2 2
+   CSF#   132    0 1 0 2 3 3 3
+   CSF#   133    0 0 3 3 3 3 0
+   CSF#   134    0 0 3 3 3 1 2
+   CSF#   135    0 0 3 3 3 0 3
+   CSF#   136    0 0 3 3 0 3 3
+   CSF#   137    0 0 3 0 3 3 3
+   CSF#   138    0 0 1 2 3 3 3
+   CSF#   139    0 0 0 3 3 3 3

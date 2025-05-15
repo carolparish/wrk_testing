@@ -1,0 +1,67 @@
+yes
+yes
+1               
+c2v 
+add     
+8               
+O  
+  0.000000000000000E+000  0.000000000000000E+000  -2.17956878000000     
+yes
+&Basis
+  8
+library 
+1               
+yes
+proceed 
+&End
+&SO
+proceed 
+&End
+add     
+6               
+C  
+  0.000000000000000E+000  -2.06915090000000      -0.667354590000000     
+yes
+&Basis
+  6
+library 
+1               
+yes
+proceed 
+&End
+&SO
+proceed 
+&End
+add     
+6               
+C  
+  0.000000000000000E+000  -1.25859398000000        1.77598379000000     
+yes
+&Basis
+  6
+library 
+1               
+yes
+proceed 
+&End
+&SO
+proceed 
+&End
+add     
+1               
+H  
+  0.000000000000000E+000  -3.87771466000000       -1.58436801000000     
+yes
+&Basis
+  1
+library 
+1               
+yes
+proceed 
+&End
+&SO
+proceed 
+&End
+proceed 
+yes
+yes
