@@ -1,0 +1,14 @@
+.gitignore
+CHANGELOG.txt
+*.o
+*.a
+*converted-to.*
+*.bak
+*.tar
+*.gz
+*.aux
+*.bcf
+*.lof
+*.log
+*.out
+*.pdf
