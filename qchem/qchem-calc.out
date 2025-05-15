@@ -1,0 +1,13 @@
+
+Running Job 1 of 1 qchem-calc.in
+qchem qchem-calc.in_2402783.0 /scratch/cparish/qchem2402783/ 1
+/usr/local/qchem611/exe/qcprog.exe_s qchem-calc.in_2402783.0 /scratch/cparish/qchem2402783/
+                  Welcome to Q-Chem
+     A Quantum Leap Into The Future Of Chemistry
+
+
+ Q-Chem 6.1, Q-Chem, Inc., Pleasanton, CA (2023)
+
+ License file: /usr/local/qchem611/qcaux/license/qchem.license.dat
+ Unable to validate license on irene2 SID 43AEA682E6
+

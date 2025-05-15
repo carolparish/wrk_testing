@@ -1,0 +1,26 @@
+$molecule
+0 3
+C         0.000000         1.398371          0.000000
+C         0.000000        -1.398371          0.000000
+C        -1.211231         0.699615          0.000000
+C         1.211231         0.699615          0.000000
+C        -1.211231        -0.699615          0.000000
+C         1.211231        -0.699615          0.000000
+H        -2.146290         1.243615          0.000000
+H         2.146290         1.243615          0.000000
+H        -2.146290        -1.243615          0.000000
+H         2.146290        -1.243615          0.000000
+$end
+$rem
+  JOBTYPE SP
+  EXCHANGE HF
+  BASIS cc-pVDZ
+  UNRESTRICTED FALSE
+  PRINT_ORBITALS TRUE
+  PRINT_GENERAL_BASIS TRUE
+  GUI 2
+$end
+$output
+  triplet_calculation.out
+$end
+
